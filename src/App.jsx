@@ -102,8 +102,8 @@ function App() {
           <Route path="r&d" element={<RandD/>} />
 
 
-          <Route path="category" element={<AllCategory/>} />
-          <Route path="category/:id" element={<Products/>} />
+          {/* <Route path="category" element={<AllCategory/>} /> */}
+          {/* <Route path="category/:id" element={<Products/>} /> */}
 <Route path="category/ca/" element={<CategoriesAndProducts />}>
           <Route path=":id" element={<Products />} />
         </Route>

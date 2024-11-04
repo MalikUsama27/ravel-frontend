@@ -23,7 +23,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import PaypalReturnPage from "./pages/shopping-view/paypal-return";
 import PaymentSuccessPage from "./pages/shopping-view/payment-success";
 import SearchProducts from "./pages/shopping-view/search";
-import { AllCategory } from './pages/shopping-view/allcategory.jsx';
+import AllCategory from "./pages/shopping-view/allcategory";
 import Products from "./pages/shopping-view/Products";
 import CategoriesAndProducts from "./pages/shopping-view/CategoriesAndProducts";
 import Aboutus from "./pages/shopping-view/Aboutus";

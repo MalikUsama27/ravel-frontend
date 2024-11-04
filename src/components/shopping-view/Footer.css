@@ -1,0 +1,58 @@
+.footer-bg {
+  background-color: black;
+}
+
+.footer-social-buttons {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.text-white {
+  color: white;
+}
+.footer-social-buttons {
+  display: flex;
+  justify-content: space-between; /* Space between text and icons */
+  align-items: center; /* Center items vertically */
+  padding: 1rem; /* Add some padding for better spacing */
+}
+
+.social-btn {
+  margin: 1rem; /* Use margin to space out buttons */
+  align-items: center;
+  width: 170%;
+
+  color: white; /* Icon color */
+  border-radius: 50%;
+}
+
+.fb-btn {
+  background-color: #3b5998; /* Facebook blue */
+  width: 200%;
+}
+.whatsapp-btn {
+  background-color: #25D366; /* WhatsApp green */
+}
+
+.section-spacing {
+  padding: 4rem;
+  border-bottom: 1px solid #ccc;
+}
+.insta-btn{
+  background-color:#FCAF45; 
+}
+.footer-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-col-spacing {
+  margin-bottom: 2rem;
+}
+
+.social-btn:hover {
+  opacity: 0.8; 
+}

@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import AuthLayout from "./components/auth/layout";
 import AuthLogin from "./pages/auth/login";
 import AuthRegister from "./pages/auth/register";
@@ -11,7 +11,6 @@ import AdminFeatures from "./pages/admin-view/features";
 import ShoppingLayout from "./components/shopping-view/layout";
 import NotFound from "./pages/not-found";
 import ShoppingHome from "./pages/shopping-view/home";
-import ShoppingListing from "./pages/shopping-view/listing";
 import ShoppingCheckout from "./pages/shopping-view/checkout";
 import ShoppingAccount from "./pages/shopping-view/account";
 import CheckAuth from "./components/common/check-auth";
@@ -46,73 +45,51 @@ function App() {
   return (
     <div className="flex flex-col overflow-hidden bg-white">
       <Routes>
-        <Route
-          path="/"
-          element={
-            <CheckAuth
-              isAuthenticated={isAuthenticated}
-              user={user}
-            >
-              
-            </CheckAuth>
-          }
-        />
-        <Route
-          path="/auth"
-          element={
-            <CheckAuth isAuthenticated={isAuthenticated} user={user}>
-              <AuthLayout />
-            </CheckAuth>
-          }
-        >
-        
+        {/* Root Route Redirect (ensure this works on Vite) */}
+        <Route path="/" element={<Navigate to="/shop/home" replace />} />
+
+        {/* Auth Routes (Accessible to anyone) */}
+        <Route path="/auth" element={<AuthLayout />}>
           <Route path="login" element={<AuthLogin />} />
           <Route path="register" element={<AuthRegister />} />
         </Route>
-        
+
+        {/* Admin Routes (Requires Authentication) */}
         <Route
           path="/admin"
           element={
-            // <CheckAuth isAuthenticated={isAuthenticated} user={user}>
+            <CheckAuth isAuthenticated={isAuthenticated}>
               <AdminLayout />
-            // </CheckAuth>
+            </CheckAuth>
           }
         >
           <Route path="dashboard" element={<AdminDashboard />} />
           <Route path="products" element={<AdminProducts />} />
           <Route path="orders" element={<AdminOrders />} />
           <Route path="features" element={<AdminFeatures />} />
-          <Route path="category" element={<AdminCategory/>} />
-         
-
+          <Route path="category" element={<AdminCategory />} />
         </Route>
-        <Route
-          path="/shop"
-          element={
-            // <CheckAuth isAuthenticated={isAuthenticated} user={user}>
-              
-            // </CheckAuth>
-            <ShoppingLayout />
-          }
-        >
+
+        {/* Shop Routes (Accessible to anyone) */}
+        <Route path="/shop" element={<ShoppingLayout />}>
           <Route path="home" element={<ShoppingHome />} />
-          <Route path="about-us" element={<Aboutus/>} />
-          <Route path="contact-us" element={<ContactUs/>} />
-          <Route path="r&d" element={<RandD/>} />
-
-
-          {/* <Route path="category/:id" element={<Products/>} /> */}
-<Route path="category/ca/" element={<CategoriesAndProducts />}>
-          <Route path=":id" element={<Products />} />
-        </Route>
-          {/* <Route path="listing" element={<ShoppingListing />} /> */}
+          <Route path="about-us" element={<Aboutus />} />
+          <Route path="contact-us" element={<ContactUs />} />
+          <Route path="r&d" element={<RandD />} />
+          <Route path="category/ca" element={<CategoriesAndProducts />}>
+            <Route path=":id" element={<Products />} />
+          </Route>
           <Route path="checkout" element={<ShoppingCheckout />} />
           <Route path="account" element={<ShoppingAccount />} />
           <Route path="paypal-return" element={<PaypalReturnPage />} />
           <Route path="payment-success" element={<PaymentSuccessPage />} />
           <Route path="search" element={<SearchProducts />} />
         </Route>
+
+        {/* Unauthenticated page */}
         <Route path="/unauth-page" element={<UnauthPage />} />
+
+        {/* Catch-all route for 404 */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

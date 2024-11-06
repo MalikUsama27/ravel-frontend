@@ -23,7 +23,6 @@ import { Skeleton } from "@/components/ui/skeleton";
 import PaypalReturnPage from "./pages/shopping-view/paypal-return";
 import PaymentSuccessPage from "./pages/shopping-view/payment-success";
 import SearchProducts from "./pages/shopping-view/search";
-import AllCategory from "./pages/shopping-view/allcategory";
 import Products from "./pages/shopping-view/Products";
 import CategoriesAndProducts from "./pages/shopping-view/CategoriesAndProducts";
 import Aboutus from "./pages/shopping-view/Aboutus";
@@ -102,7 +101,6 @@ function App() {
           <Route path="r&d" element={<RandD/>} />
 
 
-          {/* <Route path="category" element={<AllCategory/>} /> */}
           {/* <Route path="category/:id" element={<Products/>} /> */}
 <Route path="category/ca/" element={<CategoriesAndProducts />}>
           <Route path=":id" element={<Products />} />

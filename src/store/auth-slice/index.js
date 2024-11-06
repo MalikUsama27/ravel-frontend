@@ -60,7 +60,7 @@ export const checkAuth = createAsyncThunk(
 
   async () => {
     const response = await axios.get(
-      `$https://ravel-be.vercel.app/api/auth/check-auth`,
+      "https://ravel-be.vercel.app/api/auth/check-auth",
       {
         withCredentials: true,
         headers: {
@@ -99,12 +99,20 @@ const authSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(loginUser.fulfilled, (state, action) => {
-        console.log(action);
+        console.log("Login successful", action.payload); // Check the action payload
 
         state.isLoading = false;
-        state.user = action.payload.success ? action.payload.user : null;
         state.isAuthenticated = action.payload.success;
+
+        if (action.payload.success) {
+          state.user = action.payload.user; // Set the user info here (e.g., role)
+          localStorage.setItem("user", JSON.stringify(action.payload.user)); // Store user data in localStorage
+        } else {
+          state.user = null;
+          localStorage.removeItem("user"); // Remove user data from localStorage if login fails
+        }
       })
+
       .addCase(loginUser.rejected, (state, action) => {
         state.isLoading = false;
         state.user = null;

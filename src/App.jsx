@@ -15,9 +15,7 @@ import ShoppingCheckout from "./pages/shopping-view/checkout";
 import ShoppingAccount from "./pages/shopping-view/account";
 import CheckAuth from "./components/common/check-auth";
 import UnauthPage from "./pages/unauth-page";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { checkAuth } from "./store/auth-slice";
+import { useState, useEffect } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import PaypalReturnPage from "./pages/shopping-view/paypal-return";
 import PaymentSuccessPage from "./pages/shopping-view/payment-success";
@@ -29,23 +27,29 @@ import ContactUs from "./pages/shopping-view/ContactUs";
 import RandD from "./pages/shopping-view/RandD";
 
 function App() {
-  const { user, isAuthenticated, isLoading } = useSelector(
-    (state) => state.auth
-  );
-  const dispatch = useDispatch();
+  // Initialize states from localStorage
+  const [user, setUser] = useState(() => JSON.parse(localStorage.getItem('user')) || null);
+  const [isAuthenticated, setIsAuthenticated] = useState(!!user); // If user is null, set it to false
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    dispatch(checkAuth());
-  }, [dispatch]);
+    // If user exists in localStorage, update the state
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+      setIsAuthenticated(true);
+    } else {
+      setIsAuthenticated(false);
+      setUser(null);
+    }
+  }, []);
 
-  if (isLoading) return <Skeleton className="w-[800] bg-black h-[600px]" />;
-
-  console.log(isLoading, user);
+  if (isLoading) return <Skeleton className="w-[800px] bg-black h-[600px]" />;
 
   return (
     <div className="flex flex-col overflow-hidden bg-white">
       <Routes>
-        {/* Root Route Redirect (ensure this works on Vite) */}
+        {/* Root Route Redirect */}
         <Route path="/" element={<Navigate to="/shop/home" replace />} />
 
         {/* Auth Routes (Accessible to anyone) */}
@@ -58,9 +62,11 @@ function App() {
         <Route
           path="/admin"
           element={
-            <CheckAuth isAuthenticated={isAuthenticated}>
+            isAuthenticated && user?.role === "admin" ? (
               <AdminLayout />
-            </CheckAuth>
+            ) : (
+              <Navigate to="/unauth-page" />
+            )
           }
         >
           <Route path="dashboard" element={<AdminDashboard />} />
@@ -76,7 +82,7 @@ function App() {
           <Route path="about-us" element={<Aboutus />} />
           <Route path="contact-us" element={<ContactUs />} />
           <Route path="r&d" element={<RandD />} />
-          <Route path="category/ca" element={<CategoriesAndProducts />}>
+          <Route path="category/ca" element={<CategoriesAndProducts />} >
             <Route path=":id" element={<Products />} />
           </Route>
           <Route path="checkout" element={<ShoppingCheckout />} />

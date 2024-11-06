@@ -16,7 +16,7 @@ import { addToCart, fetchCartItems } from "@/store/shop/cart-slice";
 import { useToast } from "@/components/ui/use-toast";
 import ProductDetailsDialog from "@/components/shopping-view/product-details";
 import { getFeatureImages } from "@/store/common-slice";
-import AllCategory from "./allcategory";
+
 import View from "./view";
 import ViewTwo from "./ViewTwo";
 
@@ -220,7 +220,7 @@ function ShoppingHome() {
           <h2 className="text-3xl font-bold text-center mb-8">
             Shop by category
           </h2>
-          <AllCategory />
+
         </div>
       </section>
       <ViewTwo/>

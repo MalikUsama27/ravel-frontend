@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-export default function AllCategory() {
+const AllCategory=()=> {
   const [categories, setCategories] = useState([]);
 
   // Fetch categories from the API
@@ -44,3 +44,4 @@ export default function AllCategory() {
   );
 };
 
+export default AllCategory

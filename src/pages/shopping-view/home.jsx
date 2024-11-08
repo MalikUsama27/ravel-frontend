@@ -19,6 +19,7 @@ import { getFeatureImages } from "@/store/common-slice";
 
 import View from "./view";
 import ViewTwo from "./ViewTwo";
+import AllCategory from "./AllCategory";
 
 function ShoppingHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -220,7 +221,7 @@ function ShoppingHome() {
           <h2 className="text-3xl font-bold text-center mb-8">
             Shop by category
           </h2>
-
+<AllCategory/>
         </div>
       </section>
       <ViewTwo/>

@@ -27,6 +27,7 @@ import CategoriesAndProducts from "./pages/shopping-view/CategoriesAndProducts";
 import Aboutus from "./pages/shopping-view/Aboutus";
 import ContactUs from "./pages/shopping-view/ContactUs";
 import RandD from "./pages/shopping-view/RandD";
+import AllCategory from "./pages/shopping-view/AllCategory";
 
 function App() {
   const { isAuthenticated, isLoading } = useSelector((state) => state.auth);
@@ -78,6 +79,8 @@ function App() {
           <Route path="home" element={<ShoppingHome />} />
           <Route path="about-us" element={<Aboutus />} />
           <Route path="contact-us" element={<ContactUs />} />
+          <Route path="category" element={<AllCategory />} />
+
           <Route path="r&d" element={<RandD />} />
           <Route path="category/ca" element={<CategoriesAndProducts />}>
             <Route path=":id" element={<Products />} />

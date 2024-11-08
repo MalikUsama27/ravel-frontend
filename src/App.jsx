@@ -61,11 +61,9 @@ function App() {
         <Route
           path="/admin"
           element={
-            !isAuthenticated || (user && user.role !== "admin") ? (
-              <Navigate to="/auth/login" />
-            ) : (
+            <CheckAuth isAuthenticated={isAuthenticated} user={user}>
               <AdminLayout />
-            )
+            </CheckAuth>
           }
         >
           <Route path="dashboard" element={<AdminDashboard />} />

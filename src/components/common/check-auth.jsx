@@ -3,43 +3,26 @@ import { Navigate, useLocation } from "react-router-dom";
 function CheckAuth({ isAuthenticated, user, children }) {
   const location = useLocation();
 
-  // If the user is trying to access the root path ("/")
-  if (location.pathname === "/") {
-    if (!isAuthenticated) {
-      return <Navigate to="/shop/home" />;
+  // If there's no user in localStorage, redirect to the login page
+  if (!user) {
+    if (location.pathname.startsWith("/admin")) {
+      return <Navigate to="/auth/login" />;
     } else {
-      if (user?.role === "admin") {
-        return <Navigate to="/admin/dashboard" />;
-      } else {
-        return <Navigate to="/shop/home" />;
-      }
+      return <>{children}</>; // Let normal users access shop routes
     }
   }
 
-  // If the user is not authenticated and trying to access a page other than login/register
-  if (!isAuthenticated && !location.pathname.includes("/auth")) {
-    return <Navigate to="/auth/login" />;
+  // If the user is authenticated but not an admin, redirect them to the shop routes
+  if (user.role !== "admin" && location.pathname.startsWith("/admin")) {
+    return <Navigate to="/shop/home" />;
   }
 
-  // If the user is authenticated and trying to access login/register, redirect to their role-based page
-  if (isAuthenticated && (location.pathname.includes("/login") || location.pathname.includes("/register"))) {
-    if (user?.role === "admin") {
-      return <Navigate to="/admin/dashboard" />;
-    } else {
-      return <Navigate to="/shop/home" />;
-    }
-  }
-
-  // If authenticated and trying to access admin routes without being an admin
-  if (isAuthenticated && user?.role !== "admin" && location.pathname.includes("/admin")) {
-    return <Navigate to="/unauth-page" />;
-  }
-
-  // If an admin is trying to access shop routes, redirect to the admin dashboard
-  if (isAuthenticated && user?.role === "admin" && location.pathname.includes("/shop")) {
+  // If the user is an admin and tries to access shop routes, redirect them to the admin dashboard
+  if (user.role === "admin" && location.pathname.startsWith("/shop")) {
     return <Navigate to="/admin/dashboard" />;
   }
 
+  // Allow access to the requested route if the conditions above are not met
   return <>{children}</>;
 }
 

@@ -38,7 +38,8 @@ function App() {
 
   if (isLoading) return <Skeleton className="w-[800] bg-black h-[600px]" />;
 
-  const role = localStorage.getItem("role"); // Get user role from localStorage
+  // Retrieve the full user object from localStorage
+  const user = JSON.parse(localStorage.getItem("user")); // Assuming "user" is the key
 
   return (
     <div className="flex flex-col overflow-hidden bg-white">
@@ -47,7 +48,7 @@ function App() {
         <Route
           path="/auth"
           element={
-            <CheckAuth isAuthenticated={isAuthenticated} role={role}>
+            <CheckAuth isAuthenticated={isAuthenticated} user={user}>
               <AuthLayout />
             </CheckAuth>
           }
@@ -60,7 +61,7 @@ function App() {
         <Route
           path="/admin"
           element={
-            !isAuthenticated || role !== "admin" ? (
+            !isAuthenticated || (user && user.role !== "admin") ? (
               <Navigate to="/auth/login" />
             ) : (
               <AdminLayout />

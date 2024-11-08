@@ -1,6 +1,6 @@
 import { Navigate, useLocation } from "react-router-dom";
 
-function CheckAuth({ isAuthenticated, role, children }) {
+function CheckAuth({ isAuthenticated, user, children }) {
   const location = useLocation();
 
   // If the user is trying to access the root path ("/")
@@ -8,7 +8,7 @@ function CheckAuth({ isAuthenticated, role, children }) {
     if (!isAuthenticated) {
       return <Navigate to="/shop/home" />;
     } else {
-      if (role === "admin") {
+      if (user?.role === "admin") {
         return <Navigate to="/admin/dashboard" />;
       } else {
         return <Navigate to="/shop/home" />;
@@ -23,7 +23,7 @@ function CheckAuth({ isAuthenticated, role, children }) {
 
   // If the user is authenticated and trying to access login/register, redirect to their role-based page
   if (isAuthenticated && (location.pathname.includes("/login") || location.pathname.includes("/register"))) {
-    if (role === "admin") {
+    if (user?.role === "admin") {
       return <Navigate to="/admin/dashboard" />;
     } else {
       return <Navigate to="/shop/home" />;
@@ -31,12 +31,12 @@ function CheckAuth({ isAuthenticated, role, children }) {
   }
 
   // If authenticated and trying to access admin routes without being an admin
-  if (isAuthenticated && role !== "admin" && location.pathname.includes("/admin")) {
+  if (isAuthenticated && user?.role !== "admin" && location.pathname.includes("/admin")) {
     return <Navigate to="/unauth-page" />;
   }
 
   // If an admin is trying to access shop routes, redirect to the admin dashboard
-  if (isAuthenticated && role === "admin" && location.pathname.includes("/shop")) {
+  if (isAuthenticated && user?.role === "admin" && location.pathname.includes("/shop")) {
     return <Navigate to="/admin/dashboard" />;
   }
 

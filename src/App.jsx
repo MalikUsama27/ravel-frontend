@@ -36,19 +36,18 @@ function App() {
     dispatch(checkAuth());
   }, [dispatch]);
 
-  // Check if the user is loading or data is still being fetched
   if (isLoading) return <Skeleton className="w-[800] bg-black h-[600px]" />;
 
-  // Get user role from localStorage
-  const role = localStorage.getItem("role");
+  const role = localStorage.getItem("role"); // Get user role from localStorage
 
   return (
     <div className="flex flex-col overflow-hidden bg-white">
       <Routes>
+        {/* Auth routes */}
         <Route
           path="/auth"
           element={
-            <CheckAuth isAuthenticated={isAuthenticated}>
+            <CheckAuth isAuthenticated={isAuthenticated} role={role}>
               <AuthLayout />
             </CheckAuth>
           }
@@ -57,12 +56,12 @@ function App() {
           <Route path="register" element={<AuthRegister />} />
         </Route>
 
+        {/* Admin routes */}
         <Route
           path="/admin"
           element={
-            // If not authenticated or user is not admin, redirect to /unauth-page
             !isAuthenticated || role !== "admin" ? (
-              <Navigate to="/unauth-page" />
+              <Navigate to="/auth/login" />
             ) : (
               <AdminLayout />
             )
@@ -75,12 +74,8 @@ function App() {
           <Route path="category" element={<AdminCategory />} />
         </Route>
 
-        <Route
-          path="/shop"
-          element={
-            <ShoppingLayout />
-          }
-        >
+        {/* Shop routes */}
+        <Route path="/shop" element={<ShoppingLayout />}>
           <Route path="home" element={<ShoppingHome />} />
           <Route path="about-us" element={<Aboutus />} />
           <Route path="contact-us" element={<ContactUs />} />
@@ -95,6 +90,7 @@ function App() {
           <Route path="search" element={<SearchProducts />} />
         </Route>
 
+        {/* Unauthorized page */}
         <Route path="/unauth-page" element={<UnauthPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

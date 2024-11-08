@@ -104,7 +104,7 @@ function ShoppingHome() {
   const features = [
     {
       imgSrc: 'https://wear-international.com/wp-content/uploads/2022/11/icons8-us-dollar-circled-64.png',
-      title: 'LOW PRICE',
+      title: 'Best PRICE',
       subtitle: 'GUARANTEE',
       description: "If we can't beat the market price, we'll match it.",
     },

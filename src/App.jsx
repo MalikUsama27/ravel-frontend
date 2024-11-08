@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import AuthLayout from "./components/auth/layout";
 import AuthLogin from "./pages/auth/login";
 import AuthRegister from "./pages/auth/register";
@@ -11,7 +11,6 @@ import AdminFeatures from "./pages/admin-view/features";
 import ShoppingLayout from "./components/shopping-view/layout";
 import NotFound from "./pages/not-found";
 import ShoppingHome from "./pages/shopping-view/home";
-import ShoppingListing from "./pages/shopping-view/listing";
 import ShoppingCheckout from "./pages/shopping-view/checkout";
 import ShoppingAccount from "./pages/shopping-view/account";
 import CheckAuth from "./components/common/check-auth";
@@ -30,89 +29,72 @@ import ContactUs from "./pages/shopping-view/ContactUs";
 import RandD from "./pages/shopping-view/RandD";
 
 function App() {
-  const { user, isAuthenticated, isLoading } = useSelector(
-    (state) => state.auth
-  );
+  const { isAuthenticated, isLoading } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(checkAuth());
   }, [dispatch]);
 
+  // Check if the user is loading or data is still being fetched
   if (isLoading) return <Skeleton className="w-[800] bg-black h-[600px]" />;
 
-  console.log(isLoading, user);
+  // Get user role from localStorage
+  const role = localStorage.getItem("role");
 
   return (
     <div className="flex flex-col overflow-hidden bg-white">
       <Routes>
-        
-        {/* <Route
-          path="/"
-          element={
-            <CheckAuth
-              isAuthenticated={isAuthenticated}
-              user={user}
-            >
-              
-            </CheckAuth>
-          }
-        /> */}
         <Route
           path="/auth"
           element={
-            <CheckAuth isAuthenticated={isAuthenticated} user={user}>
+            <CheckAuth isAuthenticated={isAuthenticated}>
               <AuthLayout />
             </CheckAuth>
           }
         >
-        
           <Route path="login" element={<AuthLogin />} />
           <Route path="register" element={<AuthRegister />} />
         </Route>
-        
+
         <Route
           path="/admin"
           element={
-            // <CheckAuth isAuthenticated={isAuthenticated} user={user}>
+            // If not authenticated or user is not admin, redirect to /unauth-page
+            !isAuthenticated || role !== "admin" ? (
+              <Navigate to="/unauth-page" />
+            ) : (
               <AdminLayout />
-            // </CheckAuth>
+            )
           }
         >
           <Route path="dashboard" element={<AdminDashboard />} />
           <Route path="products" element={<AdminProducts />} />
           <Route path="orders" element={<AdminOrders />} />
           <Route path="features" element={<AdminFeatures />} />
-          <Route path="category" element={<AdminCategory/>} />
-         
-
+          <Route path="category" element={<AdminCategory />} />
         </Route>
+
         <Route
           path="/shop"
           element={
-            // <CheckAuth isAuthenticated={isAuthenticated} user={user}>
-              
-            // </CheckAuth>
             <ShoppingLayout />
           }
         >
           <Route path="home" element={<ShoppingHome />} />
-          <Route path="about-us" element={<Aboutus/>} />
-          <Route path="contact-us" element={<ContactUs/>} />
-          <Route path="r&d" element={<RandD/>} />
-
-
-          {/* <Route path="category/:id" element={<Products/>} /> */}
-<Route path="category/ca/" element={<CategoriesAndProducts />}>
-          <Route path=":id" element={<Products />} />
-        </Route>
-          {/* <Route path="listing" element={<ShoppingListing />} /> */}
+          <Route path="about-us" element={<Aboutus />} />
+          <Route path="contact-us" element={<ContactUs />} />
+          <Route path="r&d" element={<RandD />} />
+          <Route path="category/ca" element={<CategoriesAndProducts />}>
+            <Route path=":id" element={<Products />} />
+          </Route>
           <Route path="checkout" element={<ShoppingCheckout />} />
           <Route path="account" element={<ShoppingAccount />} />
           <Route path="paypal-return" element={<PaypalReturnPage />} />
           <Route path="payment-success" element={<PaymentSuccessPage />} />
           <Route path="search" element={<SearchProducts />} />
         </Route>
+
         <Route path="/unauth-page" element={<UnauthPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

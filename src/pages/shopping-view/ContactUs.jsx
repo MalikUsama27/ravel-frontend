@@ -147,15 +147,7 @@ const ContactUs = () => {
                   }}
                 >
                   
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3365.489172698574!2d74.51639060000001!3d32.4863524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391eea1165eaa9b9%3A0x3474e8a9a6423c8d!2sSmall%20Industrial%20Estate%20Sialkot%2C%20Punjab!5e0!3m2!1sen!2s!4v1717098872722!5m2!1sen!2s"
-                    width="100%"
-                    height="300"
-                    style={{ border: "0", minHeight: "200px" }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  ></iframe>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m8!1m3!1d594.9075994723365!2d74.5448740476508!3d32.49126076174207!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d32.491371943499225!2d74.54524578284065!5e0!3m2!1sen!2s!4v1731503431512!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
               </div>
             </div>

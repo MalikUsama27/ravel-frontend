@@ -51,6 +51,8 @@ function App() {
       title = "Revel - Contact Us";
     } else if (path === 'home') {
       title = "Revel - Home";
+    } else if (path === 'r&d') {
+      title = "Revel - R&D";
     } else if (path === 'search') {
       title = "Revel - Search";
     } else {

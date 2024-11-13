@@ -103,7 +103,7 @@ export const shoppingViewHeaderMenuItems = [
   },
   {
     id: "products",
-    label: "About US",
+    label: "About Us",
     path: "/shop/about-us",
   },
   {

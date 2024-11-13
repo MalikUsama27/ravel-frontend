@@ -65,11 +65,11 @@ function Footer() {
                 info@visionprosports.com
               </p>
               <p style={{ display: 'flex', alignItems: 'center' }}>
+                <FaWhatsapp className="me-3" /> +92 (333) 740-8106
+              </p>
+              <p style={{ display: 'flex', alignItems: 'center' }}>
                 <MdPhone className="me-3" /> +92 (333) 740-8106
               </p>
-              {/* <p style={{ display: 'flex', alignItems: 'center' }}>
-                <MdPhone className="me-3" /> +1 (929) 676‑8256
-              </p> */}
             </div>
           </div>
         </MDBContainer>

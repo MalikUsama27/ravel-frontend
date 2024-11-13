@@ -45,7 +45,7 @@ const ContactUs = () => {
           >
             <div className="col-md-7 col-sm-12" style={{ paddingRight: "5%" }}>
               <div style={{ marginLeft: "10%" }}>
-                Join over a hundred international customers that already work with f
+                Join over a hundred international customers that already work with 
                 <span className="font-bold text-red-700">Revel</span>.
               </div>
               <div
@@ -148,7 +148,7 @@ const ContactUs = () => {
                 >
                   
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3365.489172698574!2d74.51639060000001!3d32.4863524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391eea1165eaa9b9%3A0x3474e8a9a6423c8d!2sSmall%20Industrial%20Estate%20Sialkot%2C%20Punjab!5e0!3m2!1sen!2s!4v1717098872722!5m2!1sen!2s"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1000.51005577042!2d74.544336793476!3d32.49137956224123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1731504778964!5m2!1sen!2s"
                     width="100%"
                     height="300"
                     style={{ border: "0", minHeight: "200px" }}

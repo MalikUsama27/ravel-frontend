@@ -1,4 +1,5 @@
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import AuthLayout from "./components/auth/layout";
 import AuthLogin from "./pages/auth/login";
 import AuthRegister from "./pages/auth/register";
@@ -16,7 +17,6 @@ import ShoppingAccount from "./pages/shopping-view/account";
 import CheckAuth from "./components/common/check-auth";
 import UnauthPage from "./pages/unauth-page";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
 import { checkAuth } from "./store/auth-slice";
 import { Skeleton } from "@/components/ui/skeleton";
 import PaypalReturnPage from "./pages/shopping-view/paypal-return";
@@ -32,12 +32,33 @@ import AllCategory from "./pages/shopping-view/AllCategory";
 function App() {
   const { isAuthenticated, isLoading } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(checkAuth());
-  }, []);
+  const location = useLocation(); // Get current location
+
   useEffect(() => {
     dispatch(checkAuth());
   }, [dispatch]);
+
+  // Update the document title based on the current route
+  useEffect(() => {
+    const path = location.pathname.split('/')[2]; // Get the second part of the path
+    let title = "REVEL"; // Default title
+
+    if (path === 'about-us') {
+      title = "Revel - About Us";
+    } else if (path === 'category') {
+      title = "Revel - Categories";
+    } else if (path === 'contact-us') {
+      title = "Revel - Contact Us";
+    } else if (path === 'home') {
+      title = "Revel - Home";
+    } else if (path === 'search') {
+      title = "Revel - Search";
+    } else {
+      title = "Revel"; // Fallback title
+    }
+
+    document.title = title; // Update the document title
+  }, [location]);
 
   if (isLoading) return <Skeleton className="w-[800] bg-black h-[600px]" />;
 
@@ -47,8 +68,9 @@ function App() {
   return (
     <div className="flex flex-col overflow-hidden bg-white">
       <Routes>
-      <Route path="/" element={<Navigate to="/shop/home" />} />       
-       <Route
+        <Route path="/" element={<Navigate to="/shop/home" />} />
+
+        <Route
           path="/auth"
           element={
             <CheckAuth isAuthenticated={isAuthenticated} user={user}>

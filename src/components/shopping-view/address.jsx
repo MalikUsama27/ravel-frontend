@@ -10,7 +10,7 @@ const initialAddressFormData = {
   address: "",
   city: "",
   phone: "",
-  pincode: "",
+  email: "",  // Change pincode to email
   notes: "",
 };
 
@@ -50,7 +50,6 @@ function Address({ setCurrentSelectedAddress, selectedId }) {
     localStorage.setItem('addresses', JSON.stringify(updatedAddressList));
     setFormData(initialAddressFormData);
   }
-  
 
   function handleDeleteAddress(addressToDelete) {
     const updatedAddressList = addressList.filter(address => address._id !== addressToDelete._id);
@@ -65,7 +64,12 @@ function Address({ setCurrentSelectedAddress, selectedId }) {
   }
 
   function isFormValid() {
-    return Object.values(formData).every(value => value.trim() !== "");
+    return Object.values(formData).every(value => value.trim() !== "") && validateEmail(formData.email);
+  }
+
+  function validateEmail(email) {
+    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return re.test(email);
   }
 
   return (

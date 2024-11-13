@@ -36,7 +36,7 @@ function UserCartItemsContent({ cartItem, onUpdateCart }) {
       </div>
       <div className="flex flex-col items-end">
         <p className="font-semibold">
-          SKU-{((cartItem?.salePrice > 0 ? cartItem?.salePrice : cartItem?.price) * cartItem?.quantity)}
+          SKU- {cartItem?.price}
         </p>
         <Trash
           onClick={() => handleCartItemDelete(cartItem)}

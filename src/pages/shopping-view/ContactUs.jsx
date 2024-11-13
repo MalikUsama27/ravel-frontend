@@ -125,7 +125,7 @@ const ContactUs = () => {
               <h2 style={{ fontWeight: "bold", marginBottom: "20px" }}>Contact Details:</h2>
 <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
   <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
-    <FaPhone style={{ marginRight: "10px" }} />
+    <FaWhatsapp style={{ marginRight: "10px" }} />
     <span style={{ fontSize: "16px", color: "#333" }}>{"  "} +92 (333) 740-8106</span>
   </div>
   <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
@@ -147,7 +147,15 @@ const ContactUs = () => {
                   }}
                 >
                   
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m8!1m3!1d594.9075994723365!2d74.5448740476508!3d32.49126076174207!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d32.491371943499225!2d74.54524578284065!5e0!3m2!1sen!2s!4v1731503431512!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                   <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d841.3261668972041!2d74.54501319937094!3d32.49128521069702!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391eea6216555555%3A0x71b3ddb413402532!2sShivala%20Teja%20Singh%20Temple!5e0!3m2!1sen!2s!4v1731504419198!5m2!1sen!2s"
+                    width="100%"
+                    height="300"
+                    style={{ border: "0", minHeight: "200px" }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
                 </div>
               </div>
             </div>

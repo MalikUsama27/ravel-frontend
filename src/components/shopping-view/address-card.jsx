@@ -25,7 +25,7 @@ function AddressCard({
       <CardContent className="grid p-4 gap-4">
         <Label>Address: {addressInfo?.address}</Label>
         <Label>City: {addressInfo?.city}</Label>
-        <Label>Email: {addressInfo?.email}</Label> {/* Display email instead of pincode */}
+        <Label>Email: {addressInfo?.pincode}</Label> {/* Display email instead of pincode */}
         <Label>Phone: {addressInfo?.phone}</Label>
         <Label>Notes: {addressInfo?.notes}</Label>
       </CardContent>

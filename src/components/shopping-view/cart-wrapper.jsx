@@ -18,18 +18,7 @@ function UserCartWrapper({ setOpenCartSheet }) {
     updateCartItems(); // Initial load of cart items
   }, []);
 
-  const totalCartAmount =
-    cartItems.length > 0
-      ? cartItems.reduce(
-          (sum, currentItem) =>
-            sum +
-            (currentItem?.salePrice > 0
-              ? currentItem?.salePrice
-              : currentItem?.price) *
-              currentItem?.quantity,
-          0
-        )
-      : 0;
+  const totalCartQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
     <SheetContent className="sm:max-w-md">
@@ -51,8 +40,14 @@ function UserCartWrapper({ setOpenCartSheet }) {
       </div>
       <div className="mt-8 space-y-4">
         <div className="flex justify-between">
-          <span className="font-bold">Total</span>
-          <span className="font-bold">${totalCartAmount.toFixed(2)}</span>
+          <span className="font-bold">Total Items</span>
+          <span className="font-bold">{totalCartQuantity}</span>
+        </div>
+        <div className="flex justify-between">
+          <span className="font-bold">Total SKU</span>
+          <span className="font-bold">
+            {cartItems.map((item) => item.sku).join(", ")}
+          </span>
         </div>
       </div>
       <Button

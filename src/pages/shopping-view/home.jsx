@@ -192,7 +192,7 @@ function ShoppingHome() {
   </div>
 </div>
 
-<div className="container  mx-auto p-4 md:p-6 mt-[190%] md:mt-[20%]">
+<div className="container  mx-auto p-4 md:p-6 mt-[220%] md:mt-[20%]">
   <div className="w-4/4 flex items-center justify-center font-bold text-[28px]">
     <h1>WELCOME TO RAVEL</h1>
   </div>

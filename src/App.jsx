@@ -32,7 +32,9 @@ import AllCategory from "./pages/shopping-view/AllCategory";
 function App() {
   const { isAuthenticated, isLoading } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
-
+  useEffect(() => {
+    dispatch(checkAuth());
+  }, []);
   useEffect(() => {
     dispatch(checkAuth());
   }, [dispatch]);
@@ -45,8 +47,8 @@ function App() {
   return (
     <div className="flex flex-col overflow-hidden bg-white">
       <Routes>
-        {/* Auth routes */}
-        <Route
+      <Route path="/" element={<Navigate to="/shop/home" />} />       
+       <Route
           path="/auth"
           element={
             <CheckAuth isAuthenticated={isAuthenticated} user={user}>

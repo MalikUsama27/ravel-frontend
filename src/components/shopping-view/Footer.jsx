@@ -37,9 +37,9 @@ function Footer() {
           <div className="footer-container" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
             {/* Company Info Column */}
             <div className="footer-col" style={{ flex: '1 1 30%', margin: '0 20px' }}>
-              <h6 className="text-uppercase fw-bold mb-4">VISION PRO PVT LTD.</h6>
+              <h6 className="text-uppercase fw-bold mb-4"><span className="font-bold text-red-700">Revel</span> PVT LTD.</h6>
               <p style={{ textAlign: "justify" }}>
-                Vision Pro is a premier sports apparel company with over 15+ years of experience, prominent for our commitment to quality and modernization. We serve clients internationally.
+              <span className="font-bold text-red-700">Revel</span> is a premier sports apparel company with over 15+ years of experience, prominent for our commitment to quality and modernization. We serve clients internationally.
               </p>
             </div>
 

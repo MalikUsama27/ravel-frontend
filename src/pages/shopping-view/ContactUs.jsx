@@ -46,7 +46,7 @@ const ContactUs = () => {
             <div className="col-md-7 col-sm-12" style={{ paddingRight: "5%" }}>
               <div style={{ marginLeft: "10%" }}>
                 Join over a hundred international customers that already work with
-                Vision pro.
+                <span className="font-bold text-red-700">Revel</span>.
               </div>
               <div
                 style={{

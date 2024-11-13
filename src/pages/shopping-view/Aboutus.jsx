@@ -48,7 +48,7 @@ const About = () => {
 
         <h2 className="text-3xl font-bold text-center text-black my-6">Who We Are</h2>
         <p className="text-lg leading-relaxed text-gray-700 text-center mb-6">
-          Vision Pro (Pvt) Ltd is a passionate team of sports enthusiasts, engineers, and designers who share a common goal: to revolutionize football equipment.
+        <span className="font-bold text-red-700">Revel</span> is a passionate team of sports enthusiasts, engineers, and designers who share a common goal: to revolutionize football equipment.
         </p>
 
         <h2 className="text-3xl font-bold text-center text-black my-6">What We Offer</h2>
@@ -61,7 +61,7 @@ const About = () => {
           <li className="font-semibold">Hosiery Items: Providing comfort and support for peak performance.</li>
         </ul>
 
-        <h2 className="text-3xl font-bold text-center text-black my-6">Why Choose Vision Pro</h2>
+        <h2 className="text-3xl font-bold text-center text-black my-6">Why Choose <span className="font-bold text-red-700">Revel</span></h2>
         <ul className="list-disc list-inside text-lg text-gray-700 mb-6">
           <li className="font-semibold">Quality and Innovation: We constantly innovate to bring you the latest in sports technology.</li>
           <li className="font-semibold">Customer Satisfaction: Your success is our priority.</li>

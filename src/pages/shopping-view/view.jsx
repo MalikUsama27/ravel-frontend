@@ -20,7 +20,7 @@ const View = () => {
           <span className="text-white">COMPANY</span>
         </h2>
         <p className="mt-3 text-lg leading-relaxed">
-          Ravel is a well-reputed and professional manufacturing organization. We manufacture and export our products using the latest technology of the modern era.
+        <span className="font-bold text-red-700">Revel</span>is a well-reputed and professional manufacturing organization. We manufacture and export our products using the latest technology of the modern era.
         </p>
         <p className="mt-3 text-lg leading-relaxed">
           We have been serving the world market for over 12 years, dealing in quality and price-conscious products with the motto “Honesty – The Best.” From the selection of raw materials to the finishing touches and packing, our entire operation is conducted by highly qualified and trained professionals.

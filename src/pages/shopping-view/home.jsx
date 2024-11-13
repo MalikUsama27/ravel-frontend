@@ -194,21 +194,21 @@ function ShoppingHome() {
 
 <div className="container  mx-auto p-4 md:p-6 mt-[220%] md:mt-[20%]">
   <div className="w-4/4 flex items-center justify-center font-bold text-[28px]">
-    <h1>WELCOME TO RAVEL</h1>
+    <h1>WELCOME TO REVEL</h1>
   </div>
 
   <div className="mt-8">
     <p className="text-lg font-semibold md:text-xl text-gray-800 leading-relaxed text-justify">
-      Welcome to <span className="font-bold text-red-700">Ravel</span>, your premier partner in exceptional travel experiences. With over 12 years of expertise in the travel industry, we have established ourselves as a leading provider of high-quality travel services, connecting travelers worldwide. Based in both Pakistan and the US, we proudly serve clients from all corners of the globe.
+      Welcome to <span className="font-bold text-red-700">Revel</span>, your premier partner in exceptional travel experiences. With over 12 years of expertise in the travel industry, we have established ourselves as a leading provider of high-quality travel services, connecting travelers worldwide. Based in both Pakistan and the US, we proudly serve clients from all corners of the globe.
     </p>
     <p className="mt-4 text-lg md:text-xl text-gray-500 leading-relaxed text-justify">
       Our commitment to excellence has earned the trust of over 100 satisfied customers, who rely on us for unforgettable journeys. Our experienced team of travel professionals is dedicated to crafting personalized itineraries that cater to your unique needs, whether you're planning a solo adventure, a family vacation, or a corporate retreat.
     </p>
     <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
-      At Ravel, we prioritize innovation, sustainability, and customer satisfaction, ensuring that every aspect of your travel experience meets the highest standards of quality and comfort. From guided tours to bespoke travel packages, we offer a diverse range of services designed to exceed your expectations.
+      At  <span className="font-bold text-red-700">Revel</span>, we prioritize innovation, sustainability, and customer satisfaction, ensuring that every aspect of your travel experience meets the highest standards of quality and comfort. From guided tours to bespoke travel packages, we offer a diverse range of services designed to exceed your expectations.
     </p>
     <p className="mt-4 text-lg md:text-xl text-gray-800 leading-relaxed text-justify">
-      Join the Ravel family today and discover the world like never before. Experience the difference with our tailored travel solutions that inspire and enrich your journeys. Let us help you create memories that last a lifetime!
+      Join the <span className="font-bold text-red-700">Revel</span> family today and discover the world like never before. Experience the difference with our tailored travel solutions that inspire and enrich your journeys. Let us help you create memories that last a lifetime!
     </p>
   </div>
 </div>

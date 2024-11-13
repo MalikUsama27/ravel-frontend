@@ -19,10 +19,10 @@ const About = () => {
       <div className="p-6 bg-white">
         <h1 className="text-4xl text-center font-bold text-black mb-4">About Us</h1>
         <p className="mt-4 mb-2 text-lg leading-relaxed text-gray-700 text-center">
-          KHIMASHAM INDUSTRY was established in 2012 with our primary goal to provide high-quality products and competitive pricing with on-time delivery using major carriers and tracking.
+          REVEL INDUSTRY was established in 2012 with our primary goal to provide high-quality products and competitive pricing with on-time delivery using major carriers and tracking.
         </p>
         <p className="text-lg leading-relaxed text-gray-700 text-center mb-6">
-          KHIMASHAM INDUSTRY is your best source of Custom Team Apparel:
+        REVEL INDUSTRY is your best source of Custom Team Apparel:
         </p>
         <ul className="list-disc list-inside text-lg text-gray-700 text-center mb-6">
           <li>Basketball Uniforms</li>

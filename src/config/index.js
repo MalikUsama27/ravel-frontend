@@ -111,11 +111,11 @@ export const shoppingViewHeaderMenuItems = [
     label: "Get in Touch",
     path: "/shop/contact-us",
   },
-  // {
-  //   id: "women",
-  //   label: "Women",
-  //   path: "/shop/listing",
-  // },
+  {
+    id: "women",
+    label: "R & D",
+    path: "/shop/r&d",
+  },
   // {
   //   id: "kids",
   //   label: "Kids",

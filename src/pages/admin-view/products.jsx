@@ -66,7 +66,6 @@ function AdminProducts() {
     
     fetchCategories();
   }, [dispatch]);
-
   function onSubmit(event) {
     event.preventDefault();
   
@@ -77,11 +76,42 @@ function AdminProducts() {
   
     console.log("Submitting Product Data:", productData);
   
-    if (currentEditedId) {
-      dispatch(editProduct({ id: currentEditedId, formData: productData }));
-    } else {
-      dispatch(addNewProduct(productData));
-    }
+    const action = currentEditedId
+      ? dispatch(editProduct({ id: currentEditedId, formData: productData }))
+      : dispatch(addNewProduct(productData));
+  
+    action
+      .then((result) => {
+        if (result?.payload?.success) {
+          // Close the dialog and reset form state after success
+          setOpenCreateProductsDialog(false);
+          setFormData(initialFormData); // Reset form data
+          setImageFile(null); // Reset image file
+          setUploadedImageUrl(""); // Reset uploaded image URL
+          setImageLoadingState(false); // Reset image loading state
+          setCurrentEditedId(null); // Reset editing state
+          dispatch(fetchAllProducts()); // Optionally fetch products again
+          toast({
+            title: "Success",
+            description: currentEditedId ? "Product updated successfully" : "Product added successfully",
+            variant: "success",
+          });
+        } else {
+          toast({
+            title: "Error",
+            description: "There was an issue adding or editing the product.",
+            variant: "destructive",
+          });
+        }
+      })
+      .catch((error) => {
+        toast({
+          title: "Error",
+          description: "Something went wrong. Please try again.",
+          variant: "destructive",
+        });
+        console.error("Error submitting product:", error);
+      });
   }
   
 

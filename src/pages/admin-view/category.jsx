@@ -77,7 +77,7 @@ const Category = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/admin/category/delete/${id}`);
+      await axios.delete(`https://ravel-be.vercel.app/api/admin/category/delete/${id}`);
       setMessage('Category deleted successfully!');
       fetchCategories();
     } catch (error) {

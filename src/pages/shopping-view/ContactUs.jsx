@@ -125,7 +125,7 @@ const ContactUs = () => {
               <h2 style={{ fontWeight: "bold", marginBottom: "20px" }}>Contact Details:</h2>
 <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
   <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
-    <FaWhatsapp style={{ marginRight: "10px" }} />
+    <FaPhone style={{ marginRight: "10px" }} />
     <span style={{ fontSize: "16px", color: "#333" }}>{"  "} +92 (333) 740-8106</span>
   </div>
   <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>

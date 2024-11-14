@@ -39,12 +39,12 @@ function AddressCard({
         <p className="text-sm text-gray-600">{addressInfo?.notes}</p>
       </CardContent>
       <CardFooter className="p-3 flex justify-between bg-gray-50 border-t">
-        {/* <Button
+        <Button
           onClick={() => handleEditAddress(addressInfo)}
           className="text-white bg-blue-500 hover:bg-blue-600 transition duration-200 px-4 py-2 rounded-md"
         >
           Edit
-        </Button> */}
+        </Button>
         <Button
           onClick={() => handleDeleteAddress(addressInfo)}
           className="text-white bg-red-500 hover:bg-red-600 transition duration-200 px-4 py-2 rounded-md"

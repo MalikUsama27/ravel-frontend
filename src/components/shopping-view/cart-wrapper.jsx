@@ -64,9 +64,6 @@ function UserCartWrapper({ setOpenCartSheet }) {
           <span className="font-bold">Total Items</span>
           <span className="font-bold">{totalCartQuantity}</span>
         </div>
-        <div className="flex justify-between">
-          {/* Optional: Add other cart summary information here */}
-        </div>
       </div>
 
       {/* Checkout Button */}

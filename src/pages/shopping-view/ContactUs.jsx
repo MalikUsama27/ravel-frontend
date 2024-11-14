@@ -130,7 +130,7 @@ const ContactUs = () => {
   </div>
   <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
     <FaEnvelope style={{ marginRight: "10px" }} />
-    <span style={{ fontSize: "16px", color: "#333" }}>{" "} info@visionproxports.com</span>
+    <span style={{ fontSize: "16px", color: "#333" }}>{" "} info@revel-industry.com</span>
   </div>
   <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
     <FaMapMarkerAlt style={{ marginRight: "5px" }} />

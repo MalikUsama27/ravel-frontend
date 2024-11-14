@@ -62,7 +62,7 @@ function Footer() {
               </p>
               <p style={{ display: 'flex', alignItems: 'center' }}>
                 <MdEmail className="me-3" />
-                info@visionprosports.com
+                info@revel-industry.com
               </p>
               <p style={{ display: 'flex', alignItems: 'center' }}>
                 <FaWhatsapp className="me-3" /> +92 (333) 740-8106

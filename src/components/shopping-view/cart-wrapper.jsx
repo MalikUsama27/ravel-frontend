@@ -14,28 +14,24 @@ function UserCartWrapper({ setOpenCartSheet }) {
     setCartItems(storedCart);
   };
 
-  // Listen for changes in localStorage across tabs and update the cart
+  // Load cart data once when component mounts and listen for 'storage' event to update
   useEffect(() => {
-    // Initial load of cart items
+    // Initial load of cart items from localStorage
     updateCartItems();
 
     // Add event listener for 'storage' event to update cart on localStorage changes
     const handleStorageChange = (e) => {
       if (e.key === "cart") {
-        updateCartItems();
+        updateCartItems();  // Update cart items when changes occur in other tabs
       }
     };
 
-    // Continuously check for changes every 500ms
-    const intervalId = setInterval(updateCartItems, 500);
-
-    // Add event listener to sync cart across tabs
+    // Listen for changes in localStorage across tabs
     window.addEventListener("storage", handleStorageChange);
 
-    // Cleanup on unmount
+    // Cleanup event listener on unmount
     return () => {
-      clearInterval(intervalId);  // Clear the interval
-      window.removeEventListener("storage", handleStorageChange);  // Remove the event listener
+      window.removeEventListener("storage", handleStorageChange);
     };
   }, []);
 

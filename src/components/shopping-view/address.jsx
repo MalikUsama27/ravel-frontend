@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import CommonForm from "../common/form";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { addressFormControls } from "@/config";
-
 import AddressCard from "./address-card";
 import { useToast } from "../ui/use-toast";
 
@@ -10,7 +9,7 @@ const initialAddressFormData = {
   address: "",
   city: "",
   phone: "",
-  email: "",  // Change pincode to email
+  pincode: "",  // Change pincode to email
   notes: "",
 };
 
@@ -19,13 +18,11 @@ function Address({ setCurrentSelectedAddress, selectedId }) {
   const [addressList, setAddressList] = useState([]);
   const { toast } = useToast();
 
-  // Load addresses from local storage on mount
   useEffect(() => {
     const storedAddresses = JSON.parse(localStorage.getItem('addresses')) || [];
     setAddressList(storedAddresses);
   }, []);
 
-  // Function to handle adding/updating addresses
   function handleManageAddress(event) {
     event.preventDefault();
     
@@ -34,13 +31,11 @@ function Address({ setCurrentSelectedAddress, selectedId }) {
     let updatedAddressList;
     
     if (existingAddressIndex > -1) {
-      // Edit existing address
       updatedAddressList = addressList.map((address, index) => 
         index === existingAddressIndex ? { ...formData } : address
       );
       toast({ title: "Address updated successfully!" });
     } else {
-      // Add new address
       const newAddress = { ...formData, _id: Date.now() };
       updatedAddressList = [...addressList, newAddress];
       toast({ title: "Address added successfully!" });
@@ -62,9 +57,9 @@ function Address({ setCurrentSelectedAddress, selectedId }) {
     setFormData(addressToEdit);
     handleDeleteAddress(addressToEdit); // Remove the current address to edit from the list
   }
-
+ 
   function isFormValid() {
-    return Object.values(formData).every(value => value.trim() !== "") && validateEmail(formData.email);
+    return Object.values(formData).every(value => value.trim() !== "") && validateEmail(formData.pincode);
   }
 
   function validateEmail(email) {
@@ -89,12 +84,12 @@ function Address({ setCurrentSelectedAddress, selectedId }) {
       <CardHeader>
         <CardTitle>Add New Address</CardTitle>
       </CardHeader>
-      <CardContent className="space-y-3">
+      <CardContent className="space-y-4">
         <CommonForm
           formControls={addressFormControls}
           formData={formData}
           setFormData={setFormData}
-          buttonText="Add"
+          buttonText="Add Address"
           onSubmit={handleManageAddress}
           isBtnDisabled={!isFormValid()}
         />

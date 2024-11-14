@@ -189,19 +189,20 @@ export const addressFormControls = [
     placeholder: "Enter your address",
   },
   {
+    label: "Email",
+    name: "pincode",
+    componentType: "input",
+    type: "email",
+    placeholder: "Enter your Email",
+  },
+  {
     label: "City",
     name: "city",
     componentType: "input",
     type: "text",
     placeholder: "Enter your city",
   },
-  {
-    label: "Pincode",
-    name: "pincode",
-    componentType: "input",
-    type: "text",
-    placeholder: "Enter your pincode",
-  },
+
   {
     label: "Phone",
     name: "phone",

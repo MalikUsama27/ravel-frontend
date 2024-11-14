@@ -18,14 +18,17 @@ function UserCartWrapper({ setOpenCartSheet }) {
     updateCartItems(); // Initial load of cart items
   }, []);
 
+  // Calculate the total quantity of items in the cart
   const totalCartQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <SheetContent className="sm:max-w-md">
+    <SheetContent className="sm:max-w-md h-full overflow-y-auto">
       <SheetHeader>
         <SheetTitle>Your Cart</SheetTitle>
       </SheetHeader>
-      <div className="mt-8 space-y-4">
+      
+      {/* Cart Items Section */}
+      <div className="mt-8 space-y-4 overflow-y-auto max-h-72">
         {cartItems.length > 0 ? (
           cartItems.map((item) => (
             <UserCartItemsContent
@@ -38,6 +41,8 @@ function UserCartWrapper({ setOpenCartSheet }) {
           <p>Your cart is empty.</p>
         )}
       </div>
+
+      {/* Cart Summary Section */}
       <div className="mt-8 space-y-4">
         <div className="flex justify-between">
           <span className="font-bold">Total Items</span>
@@ -50,6 +55,8 @@ function UserCartWrapper({ setOpenCartSheet }) {
           </span>
         </div>
       </div>
+
+      {/* Checkout Button */}
       <Button
         onClick={() => {
           navigate("/shop/checkout");

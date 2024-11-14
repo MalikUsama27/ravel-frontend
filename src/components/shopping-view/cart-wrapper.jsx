@@ -8,14 +8,30 @@ function UserCartWrapper({ setOpenCartSheet }) {
   const navigate = useNavigate();
   const [cartItems, setCartItems] = useState([]);
 
+  // Function to update cart items from localStorage
   const updateCartItems = () => {
-    // Retrieve cart items from local storage
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCartItems(storedCart);
   };
 
+  // Listen for changes in localStorage across tabs and update the cart
   useEffect(() => {
-    updateCartItems(); // Initial load of cart items
+    // Initial load of cart items
+    updateCartItems();
+
+    // Add event listener for 'storage' event to update cart on localStorage changes
+    const handleStorageChange = (e) => {
+      if (e.key === "cart") {
+        updateCartItems();
+      }
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+
+    // Clean up the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+    };
   }, []);
 
   // Calculate the total quantity of items in the cart
@@ -49,7 +65,7 @@ function UserCartWrapper({ setOpenCartSheet }) {
           <span className="font-bold">{totalCartQuantity}</span>
         </div>
         <div className="flex justify-between">
-          {/* <span className="font-bold">Total SKU</span> */}
+          <span className="font-bold">Total SKU</span>
           <span className="font-bold">
             {cartItems.map((item) => item.sku).join(", ")}
           </span>

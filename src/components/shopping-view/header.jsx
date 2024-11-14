@@ -66,15 +66,10 @@ function MenuItems() {
 }
 
 function HeaderRightContent() {
-  const { user } = useSelector((state) => state.auth);
+  const navigate = useNavigate(); // Initialize the navigate function
   const [openCartSheet, setOpenCartSheet] = useState(false);
   const [cartItems, setCartItems] = useState([]);
-  const dispatch = useDispatch();
-
-  function handleLogout() {
-    dispatch(logoutUser());
-  }
-
+  
   // Function to update cart items from localStorage
   const updateCartItems = () => {
     const storedCartItems = JSON.parse(localStorage.getItem("cart")) || [];
@@ -91,9 +86,19 @@ function HeaderRightContent() {
     return () => clearInterval(intervalId);
   }, []);
 
+  // Navigate to checkout when cart is clicked
+  const handleNavigateToCheckout = () => {
+    navigate("/shop/checkout"); // Navigate to checkout page
+  };
+
   return (
     <div className="flex lg:items-center lg:flex-row flex-col gap-4">
-      <Sheet open={openCartSheet} onOpenChange={() => setOpenCartSheet(false)}>
+      {/* Cart Button */}
+      
+
+      {/* Add an onClick handler to navigate to checkout */}
+      <div  onClick={handleNavigateToCheckout}>
+<Sheet open={openCartSheet} onOpenChange={() => setOpenCartSheet(false)}>
         <Button
           onClick={() => setOpenCartSheet(true)}
           variant="outline"
@@ -104,40 +109,18 @@ function HeaderRightContent() {
           <span className="absolute top-[-5px] right-[2px] font-bold text-sm">
             {cartItems.length || 0}
           </span>
-          <span className="sr-only">User cart</span>
+          {/* <span className="sr-only">User cart</span> */}
         </Button>
-        <UserCartWrapper
+        {/* <UserCartWrapper
           setOpenCartSheet={setOpenCartSheet}
           cartItems={cartItems.length > 0 ? cartItems : []}
-        />
+        /> */}
       </Sheet>
-
-      {/* Uncomment and use the DropdownMenu for user account if needed */}
-      {/* <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Avatar className="bg-black">
-            <AvatarFallback className="bg-black text-white font-extrabold">
-              {user?.userName[0].toUpperCase()}
-            </AvatarFallback>
-          </Avatar>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent side="right" className="w-56">
-          <DropdownMenuLabel>Logged in as {user?.userName}</DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem onClick={() => navigate("/shop/account")}>
-            <UserCog className="mr-2 h-4 w-4" />
-            Account
-          </DropdownMenuItem>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem onClick={handleLogout}>
-            <LogOut className="mr-2 h-4 w-4" />
-            Logout
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu> */}
+      </div>
     </div>
   );
 }
+
 
 
 
@@ -167,7 +150,10 @@ function ShoppingHeader() {
           <MenuItems />
         </div>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:block" onClick={() => {
+          navigate("/shop/checkout");
+          // setOpenCartSheet(false);
+        }}>
           <HeaderRightContent />
         </div>
       </div>

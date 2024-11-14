@@ -97,10 +97,12 @@ function HeaderRightContent() {
       
 
       {/* Add an onClick handler to navigate to checkout */}
-      <div  onClick={handleNavigateToCheckout}>
-<Sheet open={openCartSheet} onOpenChange={() => setOpenCartSheet(false)}>
-        <Button
-          onClick={() => setOpenCartSheet(true)}
+      <div  >
+<Sheet 
+// open={openCartSheet} onOpenChange={() => setOpenCartSheet(false)}
+>
+        <Button onClick={handleNavigateToCheckout}
+          // onClick={() => setOpenCartSheet(true)}
           variant="outline"
           size="icon"
           className="relative"

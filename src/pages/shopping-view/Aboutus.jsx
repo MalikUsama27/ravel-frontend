@@ -17,30 +17,26 @@ const About = () => {
       </div>
 
       <div className="p-6 bg-white">
-        <h1 className="text-4xl text-center font-bold text-black mb-4">About Us</h1>
-        <p className="mt-4 mb-2 text-lg leading-relaxed text-gray-700 text-center">
-          REVEL INDUSTRY was established in 2012 with our primary goal to provide high-quality products and competitive pricing with on-time delivery using major carriers and tracking.
-        </p>
-        <p className="text-lg leading-relaxed text-gray-700 text-center mb-6">
-        REVEL INDUSTRY is your best source of Custom Team Apparel:
-        </p>
-        <ul className="list-disc list-inside text-lg text-gray-700 text-center mb-6">
-          <li>Basketball Uniforms</li>
-          <li>American Football Uniforms</li>
-          <li>Soccer Uniforms</li>
-          <li>Baseball Uniforms</li>
-          <li>Women’s Fastpitch Softball Uniforms</li>
-          <li>Slowpitch Softball Uniforms</li>
-          <li>Hoodies</li>
-          <li>Polo Shirts</li>
-          <li>Reversible jerseys and shorts for most sports</li>
-          <li>Track suits and warmups</li>
-          <li>Training suits</li>
-        </ul>
-        <p className="text-lg leading-relaxed text-gray-700 text-center mb-6">
-          We make all our apparel using professional processes and equipment, providing you the best quality at reasonable prices with on-time delivery and customer service to ensure your success.
-        </p>
+       <div className="container  mx-auto p-4 md:p-6 ">
+  <div className="w-4/4 flex items-center justify-center font-bold text-[28px]">
+    <h1>WELCOME TO REVEL</h1>
+  </div>
 
+  <div className="mt-8">
+    <p className="text-lg font-semibold md:text-xl text-gray-800 leading-relaxed text-justify">
+      Welcome to <span className="font-bold text-red-700">Revel</span>, your premier partner in exceptional travel experiences. With over 12 years of expertise in the travel industry, we have established ourselves as a leading provider of high-quality travel services, connecting travelers worldwide. Based in both Pakistan and the US, we proudly serve clients from all corners of the globe.
+    </p>
+    <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
+      Our commitment to excellence has earned the trust of over 100 satisfied customers, who rely on us for unforgettable journeys. Our experienced team of travel professionals is dedicated to crafting personalized itineraries that cater to your unique needs, whether you're planning a solo adventure, a family vacation, or a corporate retreat.
+    </p>
+    <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
+      At  <span className="font-bold text-red-700">Revel</span>, we prioritize innovation, sustainability, and customer satisfaction, ensuring that every aspect of your travel experience meets the highest standards of quality and comfort. From guided tours to bespoke travel packages, we offer a diverse range of services designed to exceed your expectations.
+    </p>
+    <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
+      Join the <span className="font-bold text-red-700">Revel</span> family today and discover the world like never before. Experience the difference with our tailored travel solutions that inspire and enrich your journeys. Let us help you create memories that last a lifetime!
+    </p>
+  </div>
+</div>
         <h2 className="text-3xl font-bold text-center text-black my-6">Our Mission</h2>
         <p className="text-lg leading-relaxed text-gray-700 text-center mb-6">
           Our mission is to empower goalkeepers and football players of all levels with innovative, durable, and high-performance products.

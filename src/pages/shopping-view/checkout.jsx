@@ -19,7 +19,7 @@ function ShoppingCheckout() {
     const storedAddress = JSON.parse(localStorage.getItem("addresses")); 
     if (storedAddress) {
       setCurrentSelectedAddress(storedAddress);
-    }
+    } 
   }, []);
 
   const totalCartAmount = cartItems.reduce(

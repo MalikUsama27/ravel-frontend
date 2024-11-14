@@ -18,11 +18,11 @@ function AddressCard({
       }
       className={`cursor-pointer w-full border-2 transition-all ease-in-out duration-300 ${
         selectedId?._id === addressInfo?._id
-          ? "border-red-500 shadow-lg transform scale-105"
+          ? "border-red-500 shadow-lg transform scale-105 " 
           : "border-gray-300 shadow-md"
       } rounded-lg bg-white overflow-hidden`}
     >
-      <CardContent className="p-4 sm:p-6 gap-3 grid">
+      <CardContent className="p-4 sm:p-6 gap-1 grid ">
         <Label className="text-lg font-semibold text-gray-700">Address</Label>
         <p className="text-sm text-gray-600">{addressInfo?.address}</p>
 

@@ -26,11 +26,16 @@ function UserCartWrapper({ setOpenCartSheet }) {
       }
     };
 
+    // Continuously check for changes every 500ms
+    const intervalId = setInterval(updateCartItems, 500);
+
+    // Add event listener to sync cart across tabs
     window.addEventListener("storage", handleStorageChange);
 
-    // Clean up the event listener when the component is unmounted
+    // Cleanup on unmount
     return () => {
-      window.removeEventListener("storage", handleStorageChange);
+      clearInterval(intervalId);  // Clear the interval
+      window.removeEventListener("storage", handleStorageChange);  // Remove the event listener
     };
   }, []);
 
@@ -42,7 +47,7 @@ function UserCartWrapper({ setOpenCartSheet }) {
       <SheetHeader>
         <SheetTitle>Your Cart</SheetTitle>
       </SheetHeader>
-      
+
       {/* Cart Items Section */}
       <div className="mt-8 space-y-4 overflow-y-auto max-h-72">
         {cartItems.length > 0 ? (

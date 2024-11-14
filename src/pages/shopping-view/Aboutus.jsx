@@ -22,20 +22,21 @@ const About = () => {
     <h1>WELCOME TO REVEL</h1>
   </div>
 
-  <div className="mt-8">
-    <p className="text-lg font-semibold md:text-xl text-gray-800 leading-relaxed text-justify">
-      Welcome to <span className="font-bold text-red-700">Revel</span>, your premier partner in exceptional travel experiences. With over 12 years of expertise in the travel industry, we have established ourselves as a leading provider of high-quality travel services, connecting travelers worldwide. Based in both Pakistan and the US, we proudly serve clients from all corners of the globe.
-    </p>
-    <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
-      Our commitment to excellence has earned the trust of over 100 satisfied customers, who rely on us for unforgettable journeys. Our experienced team of travel professionals is dedicated to crafting personalized itineraries that cater to your unique needs, whether you're planning a solo adventure, a family vacation, or a corporate retreat.
-    </p>
-    <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
-      At  <span className="font-bold text-red-700">Revel</span>, we prioritize innovation, sustainability, and customer satisfaction, ensuring that every aspect of your travel experience meets the highest standards of quality and comfort. From guided tours to bespoke travel packages, we offer a diverse range of services designed to exceed your expectations.
-    </p>
-    <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
-      Join the <span className="font-bold text-red-700">Revel</span> family today and discover the world like never before. Experience the difference with our tailored travel solutions that inspire and enrich your journeys. Let us help you create memories that last a lifetime!
-    </p>
-  </div>
+<div className="mt-8">
+  <p className="text-lg  md:text-xl text-gray-800 leading-relaxed text-justify">
+    Welcome to <span className="font-bold text-red-700">Revel</span>, the leading name in high-quality manufacturing services. As one of the top manufacturers in the industry with over 12 years of experience, we are committed to delivering exceptional, custom-made products that meet the highest standards. Based in Pakistan and the US, we serve clients across the globe, offering innovative manufacturing solutions tailored to your specific needs.
+  </p>
+  <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
+    Our reputation as the best manufacturers has been built on a foundation of trust and reliability. With over 100 satisfied clients, we are known for our ability to deliver premium products and unparalleled customer service. Whether you need large-scale production or unique, custom designs, our team of experts is here to help you bring your vision to life with precision and excellence.
+  </p>
+  <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
+    At <span className="font-bold text-red-700">Revel</span>, we lead the way in innovation and sustainability, ensuring that every product we produce meets the most rigorous quality standards. From concept to completion, we provide end-to-end manufacturing solutions that help businesses scale efficiently. We pride ourselves on offering cutting-edge technology and environmentally responsible manufacturing practices to create products that perform and last.
+  </p>
+  <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
+    Join the <span className="font-bold text-red-700">Revel</span> family today and experience firsthand why we are recognized as one of the best manufacturers in the industry. Let us be your trusted partner in creating high-quality products that stand the test of time. Connect with us today and discover how our custom manufacturing solutions can help you succeed in an ever-evolving market.
+  </p>
+</div>
+
 </div>
         <h2 className="text-3xl font-bold text-center text-black my-6">Our Mission</h2>
         <p className="text-lg leading-relaxed text-gray-700 text-center mb-6">
@@ -47,7 +48,7 @@ const About = () => {
         <span className="font-bold text-red-700">Revel</span> is a passionate team of sports enthusiasts, engineers, and designers who share a common goal: to revolutionize football equipment.
         </p>
 
-        <h2 className="text-3xl font-bold text-center text-black my-6">What We Offer</h2>
+        {/* <h2 className="text-3xl font-bold text-center text-black my-6">What We Offer</h2>
         <p className="text-lg leading-relaxed text-gray-700 text-center mb-4">
           Our product range includes:
         </p>
@@ -55,14 +56,14 @@ const About = () => {
           <li className="font-semibold">Goalkeeper Gloves: Designed for maximum grip, comfort, and protection.</li>
           <li className="font-semibold">Footballs: Engineered for superior control, durability, and flight stability.</li>
           <li className="font-semibold">Hosiery Items: Providing comfort and support for peak performance.</li>
-        </ul>
+        </ul> */}
 
-        <h2 className="text-3xl font-bold text-center text-black my-6">Why Choose <span className="font-bold text-red-700">Revel</span></h2>
+        {/* <h2 className="text-3xl font-bold text-center text-black my-6">Why Choose <span className="font-bold text-red-700">Revel</span></h2>
         <ul className="list-disc list-inside text-lg text-gray-700 mb-6">
           <li className="font-semibold">Quality and Innovation: We constantly innovate to bring you the latest in sports technology.</li>
           <li className="font-semibold">Customer Satisfaction: Your success is our priority.</li>
           <li className="font-semibold">Passion for Excellence: Our dedication to the sport drives us.</li>
-        </ul>
+        </ul> */}
 
         <h2 className="text-3xl font-bold text-center text-black my-6">Certifications</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mb-6">

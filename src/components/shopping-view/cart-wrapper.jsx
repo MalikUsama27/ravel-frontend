@@ -65,10 +65,7 @@ function UserCartWrapper({ setOpenCartSheet }) {
           <span className="font-bold">{totalCartQuantity}</span>
         </div>
         <div className="flex justify-between">
-          {/* <span className="font-bold">Total SKU</span>
-          <span className="font-bold">
-            {cartItems.map((item) => item.sku).join(", ")}
-          </span> */}
+          {/* Optional: Add other cart summary information here */}
         </div>
       </div>
 

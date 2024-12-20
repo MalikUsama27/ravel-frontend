@@ -62,11 +62,9 @@ const ViewTwo = () => {
             <span className="text-red-600">INTERNATIONAL </span>
           </h2>
           <p className="mt-3 text-white text-lg leading-relaxed">
-            Welcome to motorbike suits. We are a bold and forward-thinking online motorbike suit brand, inspired by real life. The high-quality material offers the best protection to the racer.
-          </p>
+We’re always happy to hear from our customers. Whether you’re interested in our products or have any inquiries, we’re here to help you.          </p>
           <p className="mt-3 text-white text-lg leading-relaxed">
-            Specially formulated thermoplastic provides increased protection around the knees, elbows, and shoulders.
-          </p>
+Lets contact us and our team will be happy to assist you!          </p>
           <div className="mt-5 flex flex-col md:flex-row justify-center space-x-0 md:space-x-4 space-y-2 md:space-y-0">
             <a 
               href="/shop/contact-us" 

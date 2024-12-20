@@ -198,14 +198,14 @@ function ShoppingHome() {
 
   <div className="mt-8">
     <p className="text-lg font-semibold md:text-xl text-gray-800 leading-relaxed text-justify">
-      Welcome to <span className="font-bold text-red-700">Revel</span>, your premier partner in exceptional travel experiences. With over 12 years of expertise in the travel industry, we have established ourselves as a leading provider of high-quality travel services, connecting travelers worldwide. Based in both Pakistan and the US, we proudly serve clients from all corners of the globe.
+      Welcome to <span className="font-bold text-red-700">Revel Industry</span>, Where Performance Meets Style. With over 7+ years of experience in the clothing industry.
+We have established ourselves as a leading provider  high-quality of Sports wear, Hosiery and Casual wear products. Who offer their services in worldwide.
     </p>
     <p className="mt-4 text-lg font-semibold md:text-xl text-gray-800 leading-relaxed text-justify">
-      Our commitment to excellence has earned the trust of over 100 satisfied customers, who rely on us for unforgettable journeys. Our experienced team of travel professionals is dedicated to crafting personalized itineraries that cater to your unique needs, whether you're planning a solo adventure, a family vacation, or a corporate retreat.
+     At <span className="font-bold text-red-700">Revel Industry</span>, We are dedicated to offering Sports wear, Hosiery and Casual wear that blends performance, comfort, and style and we prioritize innovation, sustainability, and customer satisfaction,  Our products are crafted with precision and passion, designed to support athletes and active individuals in achieving their best. Whether you're training, competing, or simply enjoying an active lifestyle, our high-quality gear is built to enhance your performance.
     </p>
     <p className="mt-4 text-lg font-semibold md:text-xl text-gray-800 leading-relaxed text-justify">
-      At  <span className="font-bold text-red-700">Revel</span>, we prioritize innovation, sustainability, and customer satisfaction, ensuring that every aspect of your travel experience meets the highest standards of quality and comfort. From guided tours to bespoke travel packages, we offer a diverse range of services designed to exceed your expectations.
-    </p>
+    We believe in empowering you to perform at your peak, every time, with products that combine innovation and comfort. Explore our collection and experience the difference with Revel industries.
     {/* <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
       Join the <span className="font-bold text-red-700">Revel</span> family today and discover the world like never before. Experience the difference with our tailored travel solutions that inspire and enrich your journeys. Let us help you create memories that last a lifetime!
     </p> */}

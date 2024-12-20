@@ -16,7 +16,7 @@ const ViewTwo = () => {
               <span className="text-red-600"> Embroidery</span>
             </h2>
             <p className="mt-3 text-gray-700 text-lg leading-relaxed">
-              We have been serving the world market for well over 12 years, focusing on quality and price-conscious products with the motto “Honesty – The Best.”<br />
+              We have been serving the world market for well over 7+ years, focusing on quality and price-conscious products with the motto “Honesty – The Best.”<br />
               Our entire operation is conducted by highly qualified and trained professionals.
             </p>
             <div className="mt-5 flex flex-col md:flex-row justify-center space-x-0 md:space-x-4 space-y-2 md:space-y-0">

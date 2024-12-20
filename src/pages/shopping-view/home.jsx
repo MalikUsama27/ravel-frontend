@@ -119,7 +119,7 @@ function ShoppingHome() {
       imgSrc: 'https://wear-international.com/wp-content/uploads/2022/11/icons8-star-64.png',
       title: '5-STAR',
       subtitle: 'SERVICES',
-      description: 'A staple in the industry for more than 12 years.',
+      description: 'A staple in the industry for more than 7+ years.',
     },
     {
       imgSrc: 'https://wear-international.com/wp-content/uploads/2022/11/icons8-return-purchase-64.png',

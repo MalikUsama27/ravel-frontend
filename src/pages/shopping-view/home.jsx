@@ -205,7 +205,7 @@ We have established ourselves as a leading provider  high-quality of Sports wear
      At <span className="font-bold text-red-700">Revel Industry</span>, We are dedicated to offering Sports wear, Hosiery and Casual wear that blends performance, comfort, and style and we prioritize innovation, sustainability, and customer satisfaction,  Our products are crafted with precision and passion, designed to support athletes and active individuals in achieving their best. Whether you're training, competing, or simply enjoying an active lifestyle, our high-quality gear is built to enhance your performance.
     </p>
     <p className="mt-4 text-lg font-semibold md:text-xl text-gray-800 leading-relaxed text-justify">
-    We believe in empowering you to perform at your peak, every time, with products that combine innovation and comfort. Explore our collection and experience the difference with Revel industries.
+    We believe in empowering you to perform at your peak, every time, with products that combine innovation and comfort. Explore our collection and experience the difference with Revel industries.  </p>
     {/* <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
       Join the <span className="font-bold text-red-700">Revel</span> family today and discover the world like never before. Experience the difference with our tailored travel solutions that inspire and enrich your journeys. Let us help you create memories that last a lifetime!
     </p> */}

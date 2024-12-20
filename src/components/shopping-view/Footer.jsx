@@ -21,11 +21,11 @@ function Footer() {
       <a href="https://www.facebook.com/" className="text-white"><FaFacebookF /></a>
     </div>
     <div className="social-btn whatsapp-btn me-2" role="button">
-      <a href="https://wa.me/message/WUXHS6D4O5ERF1" className="text-white"><FaWhatsapp /></a>
+      <a href="https://api.whatsapp.com/send/?phone=%2B923337408106&text&type=phone_number&app_absent=0" className="text-white"><FaWhatsapp /></a>
     </div>
-    <div className="social-btn me-2" role="button">
+{/*     <div className="social-btn me-2" role="button">
       <a href="https://youtube.com/" className="text-white"><FaYoutube /></a>
-    </div>
+    </div> */}
     <div className="social-btn insta-btn" role="button">
       <a href="https://www.instagram.com/" className="text-white"><FaInstagram /></a>
     </div>

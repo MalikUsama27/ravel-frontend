@@ -23,7 +23,7 @@ const View = () => {
         <span className="font-bold text-red-700">Revel</span> is a well-reputed and professional manufacturing organization. We manufacture and export our products using the latest technology of the modern era.
         </p>
         <p className="mt-3 text-lg leading-relaxed">
-          We have been serving the world market for over 12 years, dealing in quality and price-conscious products with the motto “Honesty – The Best.” From the selection of raw materials to the finishing touches and packing, our entire operation is conducted by highly qualified and trained professionals.
+          We have been serving the world market for over 7+ years, dealing in quality and price-conscious products with the motto “Honesty – The Best.” From the selection of raw materials to the finishing touches and packing, our entire operation is conducted by highly qualified and trained professionals.
         </p>
       </div>
     </div>

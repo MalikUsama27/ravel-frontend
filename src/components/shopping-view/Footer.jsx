@@ -18,7 +18,7 @@ function Footer() {
   <span className="text-white me-auto">Get connected with us on social networks:</span>
   <div className="d-flex">
     <div className="social-btn fb-btn me-2" role="button">
-      <a href="https://www.facebook.com/" className="text-white"><FaFacebookF /></a>
+      <a href="https://www.facebook.com/profile.php?id=61566561239211" className="text-white"><FaFacebookF /></a>
     </div>
     <div className="social-btn whatsapp-btn me-2" role="button">
       <a href="https://api.whatsapp.com/send/?phone=%2B923337408106&text&type=phone_number&app_absent=0" className="text-white"><FaWhatsapp /></a>
@@ -27,7 +27,7 @@ function Footer() {
       <a href="https://youtube.com/" className="text-white"><FaYoutube /></a>
     </div> */}
     <div className="social-btn insta-btn" role="button">
-      <a href="https://www.instagram.com/" className="text-white"><FaInstagram /></a>
+      <a href="https://www.instagram.com/revel_industry_32/" className="text-white"><FaInstagram /></a>
     </div>
   </div>
 </section>

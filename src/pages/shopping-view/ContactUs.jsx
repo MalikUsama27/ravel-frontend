@@ -134,7 +134,7 @@ const ContactUs = () => {
   </div>
   <div style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}>
     <FaMapMarkerAlt style={{ marginRight: "5px" }} />
-    <span style={{ fontSize: "16px", color: "#333" }} >{" "} Mohallah Darowal Gali Dakhi Shawala 33/353 Sialkot {"  "}Pakistan</span>
+    <span style={{ fontSize: "16px", color: "#333" }} >{" "} Mohallah Darowal Sialkot {"  "}Pakistan</span>
   </div>
 </div>
                 <div

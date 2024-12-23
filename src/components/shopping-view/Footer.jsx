@@ -77,7 +77,7 @@ function Footer() {
 
       <div className="text-center p-4 text-white ">
         © 2024 Copyright:{" "}
-        <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
+        <a className="text-reset fw-bold" href="https://revel-industry.com/">
           Revel
         </a>
       </div>

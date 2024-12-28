@@ -34,17 +34,16 @@ const ViewTwo = () => {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Image Side - shows below the text on mobile */}
-        <div
+{/*         <div
           className="flex-1 w-full md:w-7/12 bg-cover bg-center h-64 md:h-auto order-2"
           style={{ backgroundImage: `url(${img1})` }} 
         >
-          {/* Image side - no content needed here */}
-        </div>
+        </div> */}
       </div>
- */}
+
       {/* Second Section */}
       <div className="flex flex-col md:flex-row w-full bg-black mx-auto shadow-md overflow-hidden p-9">
         {/* Image Side - shows below the text on mobile */}

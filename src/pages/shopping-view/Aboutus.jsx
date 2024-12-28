@@ -24,28 +24,28 @@ const About = () => {
 
 <div className="mt-8">
   <p className="text-lg  md:text-xl text-gray-800 leading-relaxed text-justify">
-    Welcome to <span className="font-bold text-red-700">Revel</span>, the leading name in high-quality manufacturing services. As one of the top manufacturers in the industry with over 12 years of experience, we are committed to delivering exceptional, custom-made products that meet the highest standards. Based in Pakistan and the US, we serve clients across the globe, offering innovative manufacturing solutions tailored to your specific needs.
+   At <span className="font-bold text-red-700">Revel Indusry</span>, we are passionate about crafting high-quality sportswear and hosiery products that support and elevate your active lifestyle. With 7+ years of experience in design and manufacturing, we combine innovation, comfort, and performance in every item we create. Whether you're an athlete, a fitness enthusiast, or someone who values everyday comfort, our products are designed to meet your needs with precision and care.
   </p>
   <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
-    Our reputation as the best manufacturers has been built on a foundation of trust and reliability. With over 100 satisfied clients, we are known for our ability to deliver premium products and unparalleled customer service. Whether you need large-scale production or unique, custom designs, our team of experts is here to help you bring your vision to life with precision and excellence.
+    At <span className="font-bold text-red-700">Revel Indusry</span>, we lead the way in innovation and sustainability, ensuring that every product we produce meets the most rigorous quality standards. We provide end-to-end manufacturing solutions that help businesses scale efficiently from concept to completion. We pride ourselves on offering cutting-edge technology and environmentally responsible manufacturing practices to create products that perform and last.
   </p>
   <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
-    At <span className="font-bold text-red-700">Revel</span>, we lead the way in innovation and sustainability, ensuring that every product we produce meets the most rigorous quality standards. From concept to completion, we provide end-to-end manufacturing solutions that help businesses scale efficiently. We pride ourselves on offering cutting-edge technology and environmentally responsible manufacturing practices to create products that perform and last.
+    Our commitment to quality is reflected in our carefully selected materials, skilled craftsmanship, and attention to detail in every stitch. The right gear can make a difference, and our goal is to provide our customers with stylish, durable, and functional apparel that enhances their performance and confidence.
   </p>
   <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
-    Join the <span className="font-bold text-red-700">Revel</span> family today and experience firsthand why we are recognized as one of the best manufacturers in the industry. Let us be your trusted partner in creating high-quality products that stand the test of time. Connect with us today and discover how our custom manufacturing solutions can help you succeed in an ever-evolving market.
+    At Revel Industry, we are dedicated to sustainability, ethical practices, and delivering exceptional products that stand the test of time. Join us on our journey to bring comfort, performance, and innovation to your wardrobe.
   </p>
 </div>
 
 </div>
         <h2 className="text-3xl font-bold text-center text-black my-6">Our Mission</h2>
         <p className="text-lg leading-relaxed text-gray-700 text-center mb-6">
-          Our mission is to empower goalkeepers and football players of all levels with innovative, durable, and high-performance products.
+         Our mission is to deliver high-quality sportswear and hosiery products that empower individuals with unmatched comfort, style, and performance. We are committed to innovation, sustainability, and crafting products that support every active lifestyle.
         </p>
 
         <h2 className="text-3xl font-bold text-center text-black my-6">Who We Are</h2>
         <p className="text-lg leading-relaxed text-gray-700 text-center mb-6">
-        <span className="font-bold text-red-700">Revel</span> is a passionate team of sports enthusiasts, engineers, and designers who share a common goal: to revolutionize football equipment.
+        <span className="font-bold text-red-700">Revel Industry</span> is a passionate team of sports enthusiasts, engineers, and designers who share a common goal: to revolutionize sportswear and hosiery products.
         </p>
 
         {/* <h2 className="text-3xl font-bold text-center text-black my-6">What We Offer</h2>

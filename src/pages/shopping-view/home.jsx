@@ -111,7 +111,7 @@ function ShoppingHome() {
     },
     {
       imgSrc: 'https://wear-international.com/wp-content/uploads/2022/11/icons8-free-shipping-64.png',
-      title: 'FAST, FREE',
+      title: 'FAST',
       subtitle: 'SHIPPING',
       description: 'Orders shipping is always on time with best quality.*',
     },

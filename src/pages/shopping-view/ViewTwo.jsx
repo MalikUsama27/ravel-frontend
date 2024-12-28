@@ -6,6 +6,7 @@ const ViewTwo = () => {
   return (
     <div>
       {/* First Section */}
+      {/*
       <div className="flex flex-col md:flex-row w-full h-auto mx-auto shadow-md overflow-hidden p-9">
         {/* Text Side - shows first on mobile */}
         <div className="flex-1 w-full md:w-5/12 p-6 text-black flex flex-col justify-center order-1 border md:border-black">
@@ -37,12 +38,13 @@ const ViewTwo = () => {
         </div>
 
         {/* Image Side - shows below the text on mobile */}
-{/*         <div
+        {/* <div
           className="flex-1 w-full md:w-7/12 bg-cover bg-center h-64 md:h-auto order-2"
           style={{ backgroundImage: `url(${img1})` }} 
         >
         </div> */}
       </div>
+      */}
 
       {/* Second Section */}
       <div className="flex flex-col md:flex-row w-full bg-black mx-auto shadow-md overflow-hidden p-9">

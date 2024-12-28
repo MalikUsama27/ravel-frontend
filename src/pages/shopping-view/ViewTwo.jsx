@@ -42,7 +42,7 @@ const ViewTwo = () => {
           style={{ backgroundImage: `url(${img1})` }} 
         >
         </div> */}
-      </div>
+      // </div>
 
       {/* Second Section */}
       <div className="flex flex-col md:flex-row w-full bg-black mx-auto shadow-md overflow-hidden p-9">

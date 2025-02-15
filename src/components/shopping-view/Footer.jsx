@@ -37,7 +37,7 @@ function Footer() {
           <div className="footer-container" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
             {/* Company Info Column */}
             <div className="footer-col" style={{ flex: '1 1 30%', margin: '0 20px' }}>
-              <h6 className="text-uppercase fw-bold mb-4">REVEl INDUSTRY</h6>
+              <h6 className="text-uppercase fw-bold mb-4">RARE SIGNS APPAREL</h6>
               <p style={{ textAlign: "justify" }}>
              Revel is a premier sports apparel company with over 7+ years of experience, prominent for our commitment to quality and modernization. We serve clients internationally.
               </p>
@@ -78,7 +78,7 @@ function Footer() {
       <div className="text-center p-4 text-white ">
         © 2024 Copyright:{" "}
         <a className="text-reset fw-bold" href="https://revel-industry.com/">
-          Revel
+        RARE SIGNS APPAREL
         </a>
       </div>
     </MDBFooter>

@@ -41,22 +41,22 @@ function App() {
   // Update the document title based on the current route
   useEffect(() => {
     const path = location.pathname.split('/')[2]; // Get the second part of the path
-    let title = "REVEL"; // Default title
+    let title = "RARE SIGNS APPAREL"; // Default title
 
     if (path === 'about-us') {
-      title = "Revel - About Us";
+      title = "RARE SIGNS - About Us";
     } else if (path === 'category') {
-      title = "Revel - Categories";
+      title = "RARE SIGNS - Categories";
     } else if (path === 'contact-us') {
-      title = "Revel - Contact Us";
+      title = "RARE SIGNS - Contact Us";
     } else if (path === 'home') {
-      title = "Revel - Home";
+      title = "RARE SIGNS - Home";
     } else if (path === 'r&d') {
-      title = "Revel - R&D";
+      title = "RARE SIGNS - R&D";
     } else if (path === 'search') {
-      title = "Revel - Search";
+      title = "RARE SIGNS - Search";
     } else {
-      title = "Revel"; // Fallback title
+      title = "RARE SIGNS"; // Fallback title
     }
 
     document.title = title; // Update the document title

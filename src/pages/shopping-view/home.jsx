@@ -193,16 +193,16 @@ function ShoppingHome() {
 </div>
 <div className="container  mx-auto p-4 md:p-6 mt-[220%] md:mt-[20%]">
   <div className="w-4/4 flex items-center justify-center font-bold text-[28px]">
-    <h1>WELCOME TO REVEL</h1>
+    <h1>WELCOME TO RARE SIGNS APPAREL</h1>
   </div>
 
   <div className="mt-8">
     <p className="text-lg font-semibold md:text-xl text-gray-800 leading-relaxed text-justify">
-      Welcome to <span className="font-bold text-red-700">Revel Industry</span>, Where Performance Meets Style. With over 7+ years of experience in the clothing industry.
+      Welcome to <span className="font-bold text-red-700">RARE SIGNS APPAREL</span>, Where Performance Meets Style. With over 7+ years of experience in the clothing industry.
 We have established ourselves as a leading provider  high-quality of Sports wear, Hosiery and Casual wear products. Who offer their services in worldwide.
     </p>
     <p className="mt-4 text-lg font-semibold md:text-xl text-gray-800 leading-relaxed text-justify">
-     At <span className="font-bold text-red-700">Revel Industry</span>, We are dedicated to offering Sports wear, Hosiery and Casual wear that blends performance, comfort, and style and we prioritize innovation, sustainability, and customer satisfaction,  Our products are crafted with precision and passion, designed to support athletes and active individuals in achieving their best. Whether you're training, competing, or simply enjoying an active lifestyle, our high-quality gear is built to enhance your performance.
+     At <span className="font-bold text-red-700">RARE SIGNS APPAREL</span>, We are dedicated to offering Sports wear, Hosiery and Casual wear that blends performance, comfort, and style and we prioritize innovation, sustainability, and customer satisfaction,  Our products are crafted with precision and passion, designed to support athletes and active individuals in achieving their best. Whether you're training, competing, or simply enjoying an active lifestyle, our high-quality gear is built to enhance your performance.
     </p>
     <p className="mt-4 text-lg font-semibold md:text-xl text-gray-800 leading-relaxed text-justify">
     We believe in empowering you to perform at your peak, every time, with products that combine innovation and comfort. Explore our collection and experience the difference with Revel industries.  </p>

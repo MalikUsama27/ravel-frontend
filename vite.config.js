@@ -12,7 +12,7 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      "/api": "https://ravel-be.vercel.app", // replace with your backend URL
+      "/api": "https://ravel-be.vercel.app", 
     },
   },
 });

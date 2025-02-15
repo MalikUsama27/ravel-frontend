@@ -39,7 +39,7 @@ function Footer() {
             <div className="footer-col" style={{ flex: '1 1 30%', margin: '0 20px' }}>
               <h6 className="text-uppercase fw-bold mb-4">RARE SIGNS APPAREL</h6>
               <p style={{ textAlign: "justify" }}>
-             Revel is a premier sports apparel company with over 7+ years of experience, prominent for our commitment to quality and modernization. We serve clients internationally.
+              RARE SIGNS APPAREL is a premier sports apparel company with over 7+ years of experience, prominent for our commitment to quality and modernization. We serve clients internationally.
               </p>
             </div>
 

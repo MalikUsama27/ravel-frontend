@@ -7,7 +7,7 @@ import {
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaWhatsapp, FaYoutube, FaInstagram } from 'react-icons/fa';
 import { MdLocationOn, MdEmail, MdPhone } from 'react-icons/md';
-import "./Footer.css"; // Import the CSS file
+import "./Footer.css"; 
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 
 function Footer() {
@@ -27,7 +27,7 @@ function Footer() {
       <a href="https://youtube.com/" className="text-white"><FaYoutube /></a>
     </div> */}
     <div className="social-btn insta-btn" role="button">
-      <a href="https://www.instagram.com/revel_industry_32/" className="text-white"><FaInstagram /></a>
+      <a href="https://www.instagram.com/rare.signs.apparel?igsh=NTdrOHRnMTBmNWo2" className="text-white"><FaInstagram /></a>
     </div>
   </div>
 </section>
@@ -62,7 +62,7 @@ function Footer() {
               </p>
               <p style={{ display: 'flex', alignItems: 'center' }}>
                 <MdEmail className="me-3" />
-                info@revel-industry.com
+                info@raresignsapparel.com
               </p>
               <p style={{ display: 'flex', alignItems: 'center' }}>
                 <FaWhatsapp className="me-3" /> +92 (333) 740-8106

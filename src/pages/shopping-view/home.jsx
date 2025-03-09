@@ -1,8 +1,5 @@
 import { Button } from "@/components/ui/button";
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-} from "lucide-react";
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -29,7 +26,7 @@ function ShoppingHome() {
   const { featureImageList } = useSelector((state) => state.commonFeature);
   const [openDetailsDialog, setOpenDetailsDialog] = useState(false);
   const { user } = useSelector((state) => state.auth);
-  
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -47,21 +44,22 @@ function ShoppingHome() {
     dispatch(fetchProductDetails(getCurrentProductId));
   }
 
-
   const handleAddtoCart = (productId) => {
     const product = productList.find((item) => item._id === productId);
 
     if (product) {
       const cartItem = {
         productId: product._id,
-        img:product?.image,
+        img: product?.image,
         title: product?.title,
         price: product?.price,
         quantity: 1,
       };
 
-      const currentCart = JSON.parse(localStorage.getItem('cart')) || [];
-      const existingProduct = currentCart.find(item => item.productId === productId);
+      const currentCart = JSON.parse(localStorage.getItem("cart")) || [];
+      const existingProduct = currentCart.find(
+        (item) => item.productId === productId
+      );
 
       if (existingProduct) {
         existingProduct.quantity += 1;
@@ -69,15 +67,13 @@ function ShoppingHome() {
         currentCart.push(cartItem);
       }
 
-      localStorage.setItem('cart', JSON.stringify(currentCart));
+      localStorage.setItem("cart", JSON.stringify(currentCart));
 
       toast({
         title: "Product added to cart!",
       });
     }
   };
-  
-  
 
   useEffect(() => {
     if (productDetails !== null) setOpenDetailsDialog(true);
@@ -104,46 +100,50 @@ function ShoppingHome() {
   }, [dispatch]);
   const features = [
     {
-      imgSrc: 'https://wear-international.com/wp-content/uploads/2022/11/icons8-us-dollar-circled-64.png',
-      title: 'Best PRICE',
-      subtitle: 'GUARANTEE',
+      imgSrc:
+        "https://wear-international.com/wp-content/uploads/2022/11/icons8-us-dollar-circled-64.png",
+      title: "Best PRICE",
+      subtitle: "GUARANTEE",
       description: "If we can't beat the market price, we'll match it.",
     },
     {
-      imgSrc: 'https://wear-international.com/wp-content/uploads/2022/11/icons8-free-shipping-64.png',
-      title: 'FAST',
-      subtitle: 'SHIPPING',
-      description: 'Orders shipping is always on time with best quality.*',
+      imgSrc:
+        "https://wear-international.com/wp-content/uploads/2022/11/icons8-free-shipping-64.png",
+      title: "FAST",
+      subtitle: "SHIPPING",
+      description: "Orders shipping is always on time with best quality.*",
     },
     {
-      imgSrc: 'https://wear-international.com/wp-content/uploads/2022/11/icons8-star-64.png',
-      title: '5-STAR',
-      subtitle: 'SERVICES',
-      description: 'A staple in the industry for more than 7+ years.',
+      imgSrc:
+        "https://wear-international.com/wp-content/uploads/2022/11/icons8-star-64.png",
+      title: "5-STAR",
+      subtitle: "SERVICES",
+      description: "A staple in the industry for more than 7+ years.",
     },
     {
-      imgSrc: 'https://wear-international.com/wp-content/uploads/2022/11/icons8-return-purchase-64.png',
-      title: 'NO HASSLE',
-      subtitle: 'RETURNS',
-      description: 'Return any new, unused item within 30 days.',
+      imgSrc:
+        "https://wear-international.com/wp-content/uploads/2022/11/icons8-return-purchase-64.png",
+      title: "NO HASSLE",
+      subtitle: "RETURNS",
+      description: "Return any new, unused item within 30 days.",
     },
   ];
   return (
     <div className="flex flex-col min-h-screen ">
-     <div className="relative w-full max-h-[450px] md:max-h-[450px]">
-  {featureImageList && featureImageList.length > 0
-    ? featureImageList.map((slide, index) => (
-        <img
-          src={slide?.image}
-          key={index}
-          className={`${
-            index === currentSlide ? "opacity-100" : "opacity-0"
-          } absolute top-0 left-0 w-full max-h-[450px] md:max-h-[450px] object-contain transition-opacity duration-400`}
-        />
-      ))
-    : null}
+      <div className="relative w-full max-h-[450px] md:max-h-[450px]">
+        {featureImageList && featureImageList.length > 0
+          ? featureImageList.map((slide, index) => (
+              <img
+                src={slide?.image}
+                key={index}
+                className={`${
+                  index === currentSlide ? "opacity-100" : "opacity-0"
+                } absolute top-0 left-0 w-full max-h-[450px] md:max-h-[450px] object-contain transition-opacity duration-400`}
+              />
+            ))
+          : null}
 
-  <Button
+        <Button
           variant="outline"
           size="icon"
           onClick={() =>
@@ -170,55 +170,78 @@ function ShoppingHome() {
           <ChevronRightIcon className="w-4 h-4" />
         </Button>
         <div className="flex flex-col items-center py-8 md:py-0 gap-6 bg-white w-11/12 mx-auto z-10 mt-[145px] md:mt-[350px] relative">
-    <div className="flex flex-wrap justify-center items-start w-full mt-[0] md:mt-[25px] bg-white">
-      {features.map((feature, index) => (
-        <div key={index} className="flex flex-col items-center text-center w-56 relative mx-4 mb-6">
-          <img src={feature.imgSrc} alt={feature.title} className="w-10 h-10" />
-          <h3 className="mt-4 font-bold">{feature.title}</h3>
-          <p className="font-semibold">{feature.subtitle}</p>
-          <p className="mt-2 text-gray-500">{feature.description}</p>
+          <div className="flex flex-wrap justify-center items-start w-full mt-[0] md:mt-[25px] bg-white">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center text-center w-56 relative mx-4 mb-6"
+              >
+                <img
+                  src={feature.imgSrc}
+                  alt={feature.title}
+                  className="w-10 h-10"
+                />
+                <h3 className="mt-4 font-bold">{feature.title}</h3>
+                <p className="font-semibold">{feature.subtitle}</p>
+                <p className="mt-2 text-gray-500">{feature.description}</p>
 
-          {/* Bottom border for mobile */}
-          <div className="border-b border-gray-300 w-full md:hidden mt-4" />
+                {/* Bottom border for mobile */}
+                <div className="border-b border-gray-300 w-full md:hidden mt-4" />
 
-          {/* Vertical border for web view, except for the last item */}
-          {index !== features.length - 1 && (
-            <div className="hidden md:block absolute right-[-15px] top-0 h-full border-l border-gray-300"></div>
-          )}
+                {/* Vertical border for web view, except for the last item */}
+                {index !== features.length - 1 && (
+                  <div className="hidden md:block absolute right-[-15px] top-0 h-full border-l border-gray-300"></div>
+                )}
+              </div>
+            ))}
+          </div>
+          <div className="w-full border-t border-gray-300 mt-8"></div>
         </div>
-      ))}
-    </div>
-    <div className="w-full border-t border-gray-300 mt-8"></div>
-  </div>
-</div>
-<div className="container  mx-auto p-4 md:p-6 mt-[220%] md:mt-[20%]">
-  <div className="w-4/4 flex items-center justify-center font-bold text-[28px]">
-    <h1>WELCOME TO RARE SIGNS APPAREL</h1>
-  </div>
+      </div>
+      <div className="container  mx-auto p-4 md:p-6 mt-[220%] md:mt-[20%]">
+        <div className="w-4/4 flex items-center justify-center font-bold text-[28px]">
+          <h1>WELCOME TO RARE SIGNS APPAREL</h1>
+        </div>
 
-  <div className="mt-8">
-    <p className="text-lg font-semibold md:text-xl text-gray-800 leading-relaxed text-justify">
-      Welcome to <span className="font-bold text-red-700">RARE SIGNS APPAREL</span>, Where Performance Meets Style. With over 7+ years of experience in the clothing industry.
-We have established ourselves as a leading provider  high-quality of Sports wear, Hosiery and Casual wear products. Who offer their services in worldwide.
-    </p>
-    <p className="mt-4 text-lg font-semibold md:text-xl text-gray-800 leading-relaxed text-justify">
-     At <span className="font-bold text-red-700">RARE SIGNS APPAREL</span>, We are dedicated to offering Sports wear, Hosiery and Casual wear that blends performance, comfort, and style and we prioritize innovation, sustainability, and customer satisfaction,  Our products are crafted with precision and passion, designed to support athletes and active individuals in achieving their best. Whether you're training, competing, or simply enjoying an active lifestyle, our high-quality gear is built to enhance your performance.
-    </p>
-    <p className="mt-4 text-lg font-semibold md:text-xl text-gray-800 leading-relaxed text-justify">
-    We believe in empowering you to perform at your peak, every time, with products that combine innovation and comfort. Explore our collection and experience the difference with Revel industries.  </p>
-    {/* <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
+        <div className="mt-8">
+          <p className="text-lg font-semibold md:text-xl text-gray-800 leading-relaxed text-justify">
+            Welcome to{" "}
+            <span className="font-bold text-red-700">RARE SIGNS APPAREL</span>,
+            Where Performance Meets Style. With over 7+ years of experience in
+            the clothing industry. We have established ourselves as a leading
+            provider high-quality of Sports wear, Hosiery and Casual wear
+            products. Who offer their services in worldwide.
+          </p>
+          <p className="mt-4 text-lg font-semibold md:text-xl text-gray-800 leading-relaxed text-justify">
+            At{" "}
+            <span className="font-bold text-red-700">RARE SIGNS APPAREL</span>,
+            We are dedicated to offering Sports wear, Hosiery and Casual wear
+            that blends performance, comfort, and style and we prioritize
+            innovation, sustainability, and customer satisfaction, Our products
+            are crafted with precision and passion, designed to support athletes
+            and active individuals in achieving their best. Whether you're
+            training, competing, or simply enjoying an active lifestyle, our
+            high-quality gear is built to enhance your performance.
+          </p>
+          <p className="mt-4 text-lg font-semibold md:text-xl text-gray-800 leading-relaxed text-justify">
+            We believe in empowering you to perform at your peak, every time,
+            with products that combine innovation and comfort. Explore our
+            collection and experience the difference with RARE SIGNS APPAREL.{" "}
+          </p>
+          {/* <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
       Join the <span className="font-bold text-red-700">Revel</span> family today and discover the world like never before. Experience the difference with our tailored travel solutions that inspire and enrich your journeys. Let us help you create memories that last a lifetime!
     </p> */}
-  </div>
-</div>
-{/* <div className=" w-full  p-2  mt-[220%] md:mt-[20%]">
+        </div>
+      </div>
+      {/* <div className=" w-full  p-2  mt-[220%] md:mt-[20%]">
   <div className="w-4/4 "> */}
-    {/*   <div className="container  mx-auto p-4 md:p-6 mt-[220%] md:mt-[20%]">
+      {/*   <div className="container  mx-auto p-4 md:p-6 mt-[220%] md:mt-[20%]">
   <div className="w-4/4 flex items-center justify-center font-bold text-[28px]">
     <h1>WELCOME TO REVEL</h1>
-  </div>*/}<View/>
-  {/* </div> */}
-  {/* <div className="mt-8">
+  </div>*/}
+      <View />
+      {/* </div> */}
+      {/* <div className="mt-8">
     <p className="text-lg font-semibold md:text-xl text-gray-800 leading-relaxed text-justify">
       Welcome to <span className="font-bold text-red-700">Revel</span>, your premier partner in exceptional travel experiences. With over 12 years of expertise in the travel industry, we have established ourselves as a leading provider of high-quality travel services, connecting travelers worldwide. Based in both Pakistan and the US, we proudly serve clients from all corners of the globe.
     </p>
@@ -232,37 +255,36 @@ We have established ourselves as a leading provider  high-quality of Sports wear
       Join the <span className="font-bold text-red-700">Revel</span> family today and discover the world like never before. Experience the difference with our tailored travel solutions that inspire and enrich your journeys. Let us help you create memories that last a lifetime!
     </p>
   </div> */}
-{/* </div> */}
-
-
-
+      {/* </div> */}
 
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">
             Shop by category
           </h2>
-<AllCategory/>
+          <AllCategory />
         </div>
       </section>
-      <ViewTwo/>
+      <ViewTwo />
       <section className="py-12">
-  <h2 className="text-3xl font-bold text-center mb-8">Featured Products</h2>
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
-    {productList.length > 0 ? (
-      productList.map((productItem) => (
-        <ShoppingProductTile
-          key={productItem._id}
-          handleGetProductDetails={handleGetProductDetails}
-          product={productItem}
-          handleAddtoCart={handleAddtoCart}
-        />
-      ))
-    ) : (
-      <p className="col-span-full text-center">No products found.</p>
-    )}
-  </div>
-</section>
+        <h2 className="text-3xl font-bold text-center mb-8">
+          Featured Products
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
+          {productList.length > 0 ? (
+            productList.map((productItem) => (
+              <ShoppingProductTile
+                key={productItem._id}
+                handleGetProductDetails={handleGetProductDetails}
+                product={productItem}
+                handleAddtoCart={handleAddtoCart}
+              />
+            ))
+          ) : (
+            <p className="col-span-full text-center">No products found.</p>
+          )}
+        </div>
+      </section>
 
       <ProductDetailsDialog
         open={openDetailsDialog}

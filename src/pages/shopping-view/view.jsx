@@ -1,12 +1,12 @@
 import React from 'react';
-import img from '../../assets/manufacturing.jfif'; // Ensure correct image path
-import img2 from '../../assets/revel.jpeg';
+import img from '../../assets/manufacturing.jfif'; 
+import img2 from '../../assets/rsa.jpeg';
 const View = () => {
   return (
     <div className="flex flex-col md:flex-row w-full bg-black mx-auto border border-gray-300 shadow-md overflow-hidden p-6">
       {/* Image Side */}
       <div
-        className="flex-1 w-full md:w-6/12 bg-cover bg-center h-64 md:h-auto"
+        className="flex-1 w-full md:w-6/12 bg-cover bg-center h-64 md:h-auto mx-32 "
         style={{ backgroundImage: `url(${img2})` }}
       >
         {/* Image side - no content needed here */}
